@@ -187,6 +187,7 @@ def get_job_results(
                 job_url=r.job_url,
                 location=r.location,
                 date_posted=r.date_posted,
+                raw_json=r.raw_json,
                 created_at=r.created_at,
             )
             for r in rows

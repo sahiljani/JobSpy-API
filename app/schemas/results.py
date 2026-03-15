@@ -12,6 +12,7 @@ class JobResultItem(BaseModel):
     job_url: str | None = None
     location: str | None = None
     date_posted: str | None = None
+    raw_json: dict | None = None
     created_at: datetime
 
 
