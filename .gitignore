@@ -12,3 +12,7 @@ htmlcov/
 .dist/
 build/
 *.log
+
+# Local runtime artifacts
+celerybeat-schedule
+.env.bak.*
