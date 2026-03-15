@@ -20,12 +20,22 @@ import app.db.models  # noqa: F401 – register all ORM models with Base.metadat
 @pytest.fixture(scope='session')
 def integration_db_url() -> str:
     """
-    Integration DB URL. Set TEST_DATABASE_URL explicitly for isolation.
+    Integration DB URL — MUST be set via TEST_DATABASE_URL env var.
+
+    Never falls back to DATABASE_URL to prevent tests from running against
+    the production database and wiping data via drop_all/create_all.
 
     Example:
-    postgresql+psycopg://postgres:xxx@127.0.0.1:5433/llm_seo_studio
+    TEST_DATABASE_URL=postgresql+psycopg://postgres:xxx@127.0.0.1:5433/jobspy_test pytest
     """
-    return os.getenv('TEST_DATABASE_URL', os.getenv('DATABASE_URL', 'postgresql+psycopg://postgres:xxx@127.0.0.1:5433/llm_seo_studio'))
+    url = os.getenv('TEST_DATABASE_URL')
+    if not url:
+        pytest.skip(
+            'TEST_DATABASE_URL is not set. '
+            'Provide a dedicated test database to run integration tests. '
+            'Never use DATABASE_URL here — drop_all will wipe production data.'
+        )
+    return url
 
 
 @pytest.fixture(scope='session')
