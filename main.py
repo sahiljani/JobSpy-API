@@ -33,13 +33,24 @@ def openapi_artifact() -> dict:
 
 @app.exception_handler(RequestValidationError)
 async def validation_exception_handler(_: Request, exc: RequestValidationError):
+    # Pydantic v2 may embed non-serializable objects (e.g. ValueError) inside
+    # error context dicts. Stringify them before passing to JSONResponse.
+    def _serialisable_errors(errors: list) -> list:
+        result = []
+        for err in errors:
+            entry = dict(err)
+            if 'ctx' in entry and isinstance(entry['ctx'], dict):
+                entry['ctx'] = {k: str(v) for k, v in entry['ctx'].items()}
+            result.append(entry)
+        return result
+
     return JSONResponse(
         status_code=422,
         content={
             'error': {
                 'code': 'validation_error',
                 'message': 'Request validation failed',
-                'details': exc.errors(),
+                'details': _serialisable_errors(exc.errors()),
             }
         },
     )

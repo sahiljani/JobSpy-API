@@ -14,6 +14,7 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from app.db.base import Base
+import app.db.models  # noqa: F401 – register all ORM models with Base.metadata
 
 
 @pytest.fixture(scope='session')
