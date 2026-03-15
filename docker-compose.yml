@@ -29,7 +29,7 @@ services:
       - ./:/app
     env_file:
       - .env
-    command: bash -lc "pip install -r requirements.txt && celery -A app.workers.celery_app.celery_app worker --loglevel=info"
+    command: bash -lc "pip install -r requirements.txt && celery -A app.workers.celery_app.celery_app worker --loglevel=info --logfile=logs/jobspy.log"
     depends_on:
       - redis
 

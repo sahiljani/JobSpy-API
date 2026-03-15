@@ -13,6 +13,7 @@ class Settings(BaseSettings):
     app_host: str = Field(default='0.0.0.0', alias='APP_HOST')
     app_port: int = Field(default=8080, alias='APP_PORT')
     log_level: str = Field(default='INFO', alias='LOG_LEVEL')
+    log_file_path: str = Field(default='logs/jobspy.log', alias='LOG_FILE_PATH')
 
     database_url: str = Field(
         default='postgresql+psycopg://postgres:xxx@127.0.0.1:5433/llm_seo_studio',

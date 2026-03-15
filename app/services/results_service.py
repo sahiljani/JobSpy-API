@@ -1,5 +1,6 @@
 import hashlib
 import json
+import math
 from typing import Any
 
 from sqlalchemy.orm import Session
@@ -10,6 +11,17 @@ from app.db.models import JobResult
 class ResultsService:
     def __init__(self, db: Session):
         self.db = db
+
+    @staticmethod
+    def _sanitize(value: Any) -> Any:
+        """Recursively replace NaN/Inf floats with None so PostgreSQL JSON accepts the payload."""
+        if isinstance(value, float) and (math.isnan(value) or math.isinf(value)):
+            return None
+        if isinstance(value, dict):
+            return {k: ResultsService._sanitize(v) for k, v in value.items()}
+        if isinstance(value, list):
+            return [ResultsService._sanitize(v) for v in value]
+        return value
 
     @staticmethod
     def _canonicalize_url(url: str | None) -> str:
@@ -61,7 +73,7 @@ class ResultsService:
                     location=(row.get('location') or None),
                     date_posted=(row.get('date_posted') or None),
                     dedupe_hash=dedupe_hash,
-                    raw_json=json.loads(json.dumps(row, default=str)),
+                    raw_json=self._sanitize(json.loads(json.dumps(row, default=str))),
                 )
             )
             saved += 1

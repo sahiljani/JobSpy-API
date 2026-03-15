@@ -1,13 +1,20 @@
 from fastapi import APIRouter, Depends, Header, Query
+from pydantic import BaseModel, Field
 from sqlalchemy.orm import Session
 
 from app.core.config import get_settings
 from app.core.errors import bad_request, unauthorized
 from app.db.session import get_db
 from app.schemas.admin import WebhookDlqItem, WebhookDlqResponse
+from app.services.log_diagnostics import LogDiagnosticsService
 from app.services.webhook_service import WebhookService
 
 router = APIRouter(prefix='/v1/admin', tags=['admin'])
+
+
+class LogDiagnoseRequest(BaseModel):
+    log_text: str = Field(default='')
+    prompt: str = Field(default='')
 
 
 def _require_api_key(x_api_key: str | None = Header(default=None)) -> None:
@@ -48,3 +55,16 @@ def replay_webhook_event(event_id: str, db: Session = Depends(get_db)) -> dict:
 
     db.commit()
     return {'ok': ok, 'event_id': event_id}
+
+
+@router.get('/logs/tail', dependencies=[Depends(_require_api_key)])
+def tail_logs(limit: int = Query(default=200, ge=1, le=1000)) -> dict:
+    settings = get_settings()
+    service = LogDiagnosticsService()
+    return service.tail_log(settings.log_file_path, limit=limit)
+
+
+@router.post('/logs/diagnose', dependencies=[Depends(_require_api_key)])
+def diagnose_logs(payload: LogDiagnoseRequest) -> dict:
+    service = LogDiagnosticsService()
+    return service.diagnose(log_text=payload.log_text, prompt=payload.prompt)
