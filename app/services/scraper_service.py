@@ -7,7 +7,7 @@ from jobspy import scrape_jobs
 # Per-unit timeout. Celery workers are daemon processes so we cannot spawn
 # child processes. We use a thread instead — it cannot be forcibly killed but
 # the orchestrator will stop waiting and continue with the next unit.
-UNIT_TIMEOUT_SEC = 120
+UNIT_TIMEOUT_SEC = 300
 
 
 @dataclass
@@ -41,6 +41,7 @@ class ScraperService:
             'country_indeed': country_indeed,
             'proxies': proxies,
             'google_search_term': f'{search_term} jobs near {location} since yesterday',
+            'linkedin_fetch_description': site == 'linkedin',
             'verbose': 0,
         }
 
