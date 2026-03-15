@@ -260,6 +260,19 @@ File:
 
 ---
 
+## Integration test run
+
+Run integration tests with explicit test DB URL:
+
+```bash
+TEST_DATABASE_URL=postgresql+psycopg://postgres:xxx@127.0.0.1:5433/llm_seo_studio \
+python -m pytest -q tests/test_integration_eager.py
+```
+
+Notes:
+- Tests use FastAPI TestClient and monkeypatched eager worker execution.
+- Scraping is mocked in integration tests for deterministic outcomes.
+
 ## Current status
 
-This project has completed Phase 1 and substantial Phase 2 hardening. Remaining work is primarily integration testing and final polish.
+Phase 1 is complete and Phase 2 implementation tasks are complete, including integration-test scaffolding and runnable eager-mode integration tests.

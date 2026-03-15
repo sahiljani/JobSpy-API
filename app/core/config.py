@@ -14,7 +14,10 @@ class Settings(BaseSettings):
     app_port: int = Field(default=8080, alias='APP_PORT')
     log_level: str = Field(default='INFO', alias='LOG_LEVEL')
 
-    database_url: str = Field(alias='DATABASE_URL')
+    database_url: str = Field(
+        default='postgresql+psycopg://postgres:xxx@127.0.0.1:5433/llm_seo_studio',
+        alias='DATABASE_URL',
+    )
     redis_url: str = Field(default='redis://127.0.0.1:6379/1', alias='REDIS_URL')
     api_key: str = Field(default='change-me', alias='API_KEY')
     secret_encryption_key: str = Field(default='change-me-encryption-seed', alias='SECRET_ENCRYPTION_KEY')
