@@ -6,6 +6,7 @@ from pathlib import Path
 import pytest
 from fastapi.testclient import TestClient
 from sqlalchemy import create_engine
+from sqlalchemy.exc import OperationalError
 from sqlalchemy.orm import Session, sessionmaker
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -29,6 +30,13 @@ def integration_db_url() -> str:
 @pytest.fixture(scope='session')
 def test_engine(integration_db_url: str):
     engine = create_engine(integration_db_url, future=True, pool_pre_ping=True)
+
+    try:
+        with engine.connect() as conn:
+            conn.exec_driver_sql('SELECT 1')
+    except OperationalError:
+        pytest.skip('Integration DB not reachable; skipping DB-backed tests in this environment.')
+
     Base.metadata.drop_all(bind=engine)
     Base.metadata.create_all(bind=engine)
     try:

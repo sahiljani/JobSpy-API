@@ -235,6 +235,10 @@ PY"
 - `docs/ALERTING_RUNBOOK.md`
 - `docs/SECRETS_STRATEGY.md`
 - `docs/DEPLOYMENT_PLAYBOOK.md`
+- `docs/SLO_ERROR_BUDGET.md`
+- `docs/INCIDENT_TEMPLATES.md`
+- `docs/DASHBOARD_SPEC.md`
+- `docs/DEPLOYMENT_INCIDENTS.md`
 
 ---
 
