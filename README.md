@@ -16,7 +16,7 @@ Production-oriented async scraping API using **FastAPI + Celery + PostgreSQL + R
 ## Architecture (high-level)
 
 ```text
-Client (Laravel/other)
+Client
    |
    | POST /v1/jobs
    v
@@ -38,12 +38,15 @@ Webhook Delivery Log + retry scheduler (Celery Beat)
 ## Implemented features
 
 ### API endpoints
+- `GET /v1/jobs` (list with filters + cursor pagination)
 - `POST /v1/jobs`
 - `GET /v1/jobs/{job_id}`
 - `GET /v1/jobs/{job_id}/events`
 - `GET /v1/jobs/{job_id}/results`
 - `GET /v1/jobs/{job_id}/export.csv`
 - `POST /v1/jobs/{job_id}/cancel`
+- `GET /v1/admin/webhooks/dlq`
+- `POST /v1/admin/webhooks/replay/{event_id}`
 - `GET /healthz`
 - `GET /metrics`
 
@@ -57,6 +60,8 @@ Webhook Delivery Log + retry scheduler (Celery Beat)
 - HMAC-SHA256 signing (`X-Webhook-Signature`)
 - Retry schedule persisted per failed delivery
 - Periodic retry worker (`webhooks.retry_due`) via Celery Beat
+- Manual replay endpoint for individual events
+- DLQ inspection endpoint for exhausted retries
 
 ### Persistence
 - `jobs`, `job_units`, `job_events`, `webhook_deliveries`, `job_results`
@@ -69,6 +74,12 @@ Webhook Delivery Log + retry scheduler (Celery Beat)
 - Encrypted webhook secret storage (seed-based)
 - Standardized API error envelope for HTTP errors + validation
 
+### Ops/maintenance
+- Daily retention cleanup task (`maintenance.cleanup_retention`)
+- OpenAPI artifact pinned at `openapi/openapi.v1.json`
+- CI workflow at `.github/workflows/ci.yml`
+- Additional docs under `docs/`
+
 ---
 
 ## Project structure
@@ -76,20 +87,10 @@ Webhook Delivery Log + retry scheduler (Celery Beat)
 ```text
 JobSpy/
   app/
-    api/v1/jobs.py
-    core/config.py
-    core/errors.py
-    core/logging.py
-    core/metrics.py
-    core/security.py
-    db/base.py
-    db/models.py
-    db/session.py
-    schemas/
-    services/
-    workers/
   alembic/
   tests/
+  docs/
+  openapi/
   main.py
   requirements.txt
   docker-compose.yml
@@ -114,7 +115,7 @@ Important values:
 
 ---
 
-## Local run (without Docker compose)
+## Local run
 
 1. Install deps:
 
@@ -181,32 +182,21 @@ curl -X POST http://localhost:8080/v1/jobs \
     "webhook": {
       "url": "http://localhost:8090/webhooks/jobspy",
       "secret": "whsec_xxx"
-    },
-    "options": {
-      "max_runtime_sec": 1800,
-      "dedupe_by": "job_url",
-      "progress_interval_sec": 5,
-      "emit_partial_results": true
     }
   }'
 ```
 
-### Check job
+### List jobs
 
 ```bash
-curl -H "X-API-Key: change-me" http://localhost:8080/v1/jobs/<job_id>
+curl -H "X-API-Key: change-me" "http://localhost:8080/v1/jobs?limit=20&status=running"
 ```
 
-### List events
+### DLQ + replay
 
 ```bash
-curl -H "X-API-Key: change-me" "http://localhost:8080/v1/jobs/<job_id>/events?limit=100&cursor=0"
-```
-
-### List results
-
-```bash
-curl -H "X-API-Key: change-me" "http://localhost:8080/v1/jobs/<job_id>/results?limit=100&cursor=0"
+curl -H "X-API-Key: change-me" http://localhost:8080/v1/admin/webhooks/dlq
+curl -X POST -H "X-API-Key: change-me" http://localhost:8080/v1/admin/webhooks/replay/<event_id>
 ```
 
 ### Export CSV
@@ -215,64 +205,39 @@ curl -H "X-API-Key: change-me" "http://localhost:8080/v1/jobs/<job_id>/results?l
 curl -H "X-API-Key: change-me" -o results.csv http://localhost:8080/v1/jobs/<job_id>/export.csv
 ```
 
-### Cancel job
+---
+
+## OpenAPI
+
+Pinned OpenAPI schema artifact:
+- `openapi/openapi.v1.json`
+
+Regenerate artifact:
 
 ```bash
-curl -X POST -H "X-API-Key: change-me" http://localhost:8080/v1/jobs/<job_id>/cancel
+docker run --rm -v "$PWD":/app -w /app python:3.11-slim \
+  bash -lc "pip install -r requirements.txt && python - <<'PY'
+import json
+from pathlib import Path
+from main import app
+p=Path('openapi/openapi.v1.json')
+p.parent.mkdir(parents=True, exist_ok=True)
+p.write_text(json.dumps(app.openapi(), indent=2), encoding='utf-8')
+print('wrote', p)
+PY"
 ```
 
 ---
 
-## Webhook signature verification example
+## Ops docs
 
-Use provided script:
-
-```bash
-python scripts_webhook_verify_example.py
-```
-
-File:
-- `scripts_webhook_verify_example.py`
+- `docs/LOAD_TEST_NOTES.md`
+- `docs/ALERTING_RUNBOOK.md`
+- `docs/SECRETS_STRATEGY.md`
+- `docs/DEPLOYMENT_PLAYBOOK.md`
 
 ---
-
-## Troubleshooting
-
-### 1) `401 unauthorized`
-- Check `X-API-Key` matches `.env` value.
-
-### 2) Jobs stay queued
-- Worker is not running or Redis unavailable.
-- Verify worker logs and `REDIS_URL`.
-
-### 3) Webhook not arriving
-- Ensure webhook URL reachable from API host.
-- Check `webhook_deliveries` table for attempts/failures.
-- Run beat scheduler for retries.
-
-### 4) No results for some sites
-- Expected for restrictive job boards/time windows.
-- Use proxies and broaden search term or hours window.
-
-### 5) Migration issues
-- Confirm DB URL/credentials and PostgreSQL port (`5433` in this setup).
-- Re-run: `alembic upgrade head`.
-
----
-
-## Integration test run
-
-Run integration tests with explicit test DB URL:
-
-```bash
-TEST_DATABASE_URL=postgresql+psycopg://postgres:xxx@127.0.0.1:5433/llm_seo_studio \
-python -m pytest -q tests/test_integration_eager.py
-```
-
-Notes:
-- Tests use FastAPI TestClient and monkeypatched eager worker execution.
-- Scraping is mocked in integration tests for deterministic outcomes.
 
 ## Current status
 
-Phase 1 is complete and Phase 2 implementation tasks are complete, including integration-test scaffolding and runnable eager-mode integration tests.
+Phase 1 and 2 are complete. Phase 3 standalone production-readiness work is actively progressing.

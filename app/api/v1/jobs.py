@@ -2,13 +2,14 @@ from datetime import datetime, timezone
 
 from fastapi import APIRouter, Depends, Header, Query
 from fastapi.responses import FileResponse
-from sqlalchemy import select
+from sqlalchemy import and_, or_, select
 from sqlalchemy.orm import Session
 
 from app.core.config import get_settings
 from app.core.errors import bad_request, conflict, not_found, unauthorized
 from app.db.models import Job, JobEvent, JobResult
 from app.db.session import get_db
+from app.schemas.admin import JobListItem, JobListResponse
 from app.schemas.jobs import JobCancelResponse, JobCreateRequest, JobCreateResponse, JobStatusResponse
 from app.schemas.results import JobResultItem, JobResultsResponse
 from app.services.export_service import ExportService
@@ -22,6 +23,63 @@ def _require_api_key(x_api_key: str | None = Header(default=None)) -> None:
     settings = get_settings()
     if x_api_key != settings.api_key:
         raise unauthorized('invalid API key')
+
+
+@router.get('', response_model=JobListResponse, dependencies=[Depends(_require_api_key)])
+def list_jobs(
+    db: Session = Depends(get_db),
+    limit: int = Query(default=50, ge=1, le=200),
+    cursor: str | None = Query(default=None),
+    status: str | None = Query(default=None),
+    q: str | None = Query(default=None),
+) -> JobListResponse:
+    q_stmt = select(Job)
+
+    if status:
+        q_stmt = q_stmt.where(Job.status == status)
+
+    if q:
+        like_expr = f'%{q.strip()}%'
+        q_stmt = q_stmt.where(
+            or_(
+                Job.id.ilike(like_expr),
+                Job.idempotency_key.ilike(like_expr),
+            )
+        )
+
+    if cursor:
+        row = db.get(Job, cursor)
+        if row:
+            q_stmt = q_stmt.where(
+                or_(
+                    Job.created_at < row.created_at,
+                    and_(Job.created_at == row.created_at, Job.id < row.id),
+                )
+            )
+
+    q_stmt = q_stmt.order_by(Job.created_at.desc(), Job.id.desc()).limit(limit)
+    rows = db.scalars(q_stmt).all()
+
+    next_cursor = rows[-1].id if rows else None
+    return JobListResponse(
+        jobs=[
+            JobListItem(
+                job_id=r.id,
+                status=r.status,
+                progress_percent=r.progress_percent,
+                total_units=r.total_units,
+                completed_units=r.completed_units,
+                failed_units=r.failed_units,
+                skipped_units=r.skipped_units,
+                rows_collected=r.rows_collected,
+                created_at=r.created_at,
+                started_at=r.started_at,
+                finished_at=r.finished_at,
+            )
+            for r in rows
+        ],
+        next_cursor=next_cursor,
+    )
 
 
 @router.post('', response_model=JobCreateResponse, dependencies=[Depends(_require_api_key)])
@@ -85,11 +143,11 @@ def get_job_events(
     if not job:
         raise not_found('job not found')
 
-    q = select(JobEvent).where(JobEvent.job_id == job_id).order_by(JobEvent.sequence.asc()).limit(limit)
+    q_stmt = select(JobEvent).where(JobEvent.job_id == job_id).order_by(JobEvent.sequence.asc()).limit(limit)
     if cursor > 0:
-        q = q.where(JobEvent.sequence > cursor)
+        q_stmt = q_stmt.where(JobEvent.sequence > cursor)
 
-    events = db.scalars(q).all()
+    events = db.scalars(q_stmt).all()
     next_cursor = events[-1].sequence if events else cursor
 
     return {
@@ -110,11 +168,11 @@ def get_job_results(
     if not job:
         raise not_found('job not found')
 
-    q = select(JobResult).where(JobResult.job_id == job_id).order_by(JobResult.id.asc()).limit(limit)
+    q_stmt = select(JobResult).where(JobResult.job_id == job_id).order_by(JobResult.id.asc()).limit(limit)
     if cursor > 0:
-        q = q.where(JobResult.id > cursor)
+        q_stmt = q_stmt.where(JobResult.id > cursor)
 
-    rows = db.scalars(q).all()
+    rows = db.scalars(q_stmt).all()
     next_cursor = rows[-1].id if rows else cursor
 
     return JobResultsResponse(

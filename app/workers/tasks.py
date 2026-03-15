@@ -6,6 +6,7 @@ from app.core.metrics import metrics
 from app.db.models import Job, JobUnit
 from app.db.session import SessionLocal
 from app.services.event_service import EventService
+from app.services.retention_service import RetentionService
 from app.services.results_service import ResultsService
 from app.services.scraper_service import ScraperService
 from app.services.webhook_service import WebhookService
@@ -186,5 +187,27 @@ def retry_due_webhooks(batch_size: int = 100) -> int:
             metrics.inc('webhook_retry_attempts_total', retried)
         db.commit()
         return retried
+    finally:
+        db.close()
+
+
+@celery_app.task(name='maintenance.cleanup_retention')
+def cleanup_retention(retain_days: int = 14) -> dict:
+    db = SessionLocal()
+    try:
+        retention = RetentionService(db)
+        db_counts = retention.cleanup_db_records(retain_days=retain_days)
+        exports_removed = retention.cleanup_exports(retain_days=retain_days)
+        db.commit()
+
+        result = {
+            **db_counts,
+            'deleted_exports': exports_removed,
+            'retain_days': retain_days,
+        }
+        total_deleted = sum(v for k, v in result.items() if k.startswith('deleted_'))
+        if total_deleted > 0:
+            metrics.inc('maintenance_cleanup_total', total_deleted)
+        return result
     finally:
         db.close()

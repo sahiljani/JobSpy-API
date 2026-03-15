@@ -1,0 +1,52 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: xxx
+          POSTGRES_DB: llm_seo_studio
+        ports:
+          - 5433:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres -d llm_seo_studio"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 10
+      redis:
+        image: redis:7
+        ports:
+          - 6379:6379
+
+    env:
+      DATABASE_URL: postgresql+psycopg://postgres:xxx@127.0.0.1:5433/llm_seo_studio
+      REDIS_URL: redis://127.0.0.1:6379/1
+      API_KEY: change-me
+      SECRET_ENCRYPTION_KEY: change-me-encryption-seed
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Lint (compile check)
+        run: |
+          python -m compileall app main.py tests
+      - name: Migration check
+        run: |
+          alembic upgrade head
+      - name: Run tests
+        run: |
+          pytest -q tests

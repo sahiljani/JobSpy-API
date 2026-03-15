@@ -2,14 +2,18 @@ from fastapi import FastAPI, Request
 from fastapi.exceptions import RequestValidationError
 from fastapi.responses import JSONResponse
 
+from app.api.v1.admin import router as admin_router
 from app.api.v1.jobs import router as jobs_router
+from app.api.v1.ops import router as ops_router
 from app.core.logging import configure_logging
 from app.core.metrics import metrics
 
 configure_logging()
 
-app = FastAPI(title='JobSpy Async API', version='0.2.0')
+app = FastAPI(title='JobSpy Async API', version='0.3.0')
 app.include_router(jobs_router)
+app.include_router(admin_router)
+app.include_router(ops_router)
 
 
 @app.get('/healthz')
@@ -20,6 +24,11 @@ def healthz() -> dict:
 @app.get('/metrics')
 def get_metrics() -> dict:
     return metrics.snapshot()
+
+
+@app.get('/openapi.json', include_in_schema=False)
+def openapi_artifact() -> dict:
+    return app.openapi()
 
 
 @app.exception_handler(RequestValidationError)

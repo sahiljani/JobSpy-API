@@ -121,10 +121,6 @@ class WebhookService:
             job = self.db.get(Job, event.job_id)
             if not job:
                 continue
-            if job.status in {'cancelled'}:
-                # still allow delivery retries for audit trail terminal states?
-                # For now, continue trying because events should still be deliverable.
-                pass
 
             next_attempt = int(last_delivery.attempt) + 1
             self.dispatch_event(job, event, attempt=next_attempt)
@@ -132,3 +128,44 @@ class WebhookService:
 
         self.db.flush()
         return retried
+
+    def replay_event(self, *, event_id: str) -> bool:
+        event = self.db.get(JobEvent, event_id)
+        if not event:
+            raise ValueError('event not found')
+
+        job = self.db.get(Job, event.job_id)
+        if not job:
+            raise ValueError('job not found')
+
+        latest_attempt = self.db.scalar(
+            select(func.max(WebhookDelivery.attempt)).where(WebhookDelivery.event_id == event_id)
+        )
+        next_attempt = int(latest_attempt or 0) + 1
+        return self.dispatch_event(job, event, attempt=next_attempt)
+
+    def list_dlq(self, *, limit: int = 100) -> list[WebhookDelivery]:
+        latest_attempt_subq = (
+            select(
+                WebhookDelivery.event_id.label('event_id'),
+                func.max(WebhookDelivery.attempt).label('max_attempt'),
+            )
+            .group_by(WebhookDelivery.event_id)
+            .subquery()
+        )
+
+        # DLQ condition = latest attempt failed and no next_retry_at scheduled.
+        return self.db.scalars(
+            select(WebhookDelivery)
+            .join(
+                latest_attempt_subq,
+                and_(
+                    WebhookDelivery.event_id == latest_attempt_subq.c.event_id,
+                    WebhookDelivery.attempt == latest_attempt_subq.c.max_attempt,
+                ),
+            )
+            .where(WebhookDelivery.success.is_(False))
+            .where(WebhookDelivery.next_retry_at.is_(None))
+            .order_by(WebhookDelivery.created_at.desc())
+            .limit(limit)
+        ).all()

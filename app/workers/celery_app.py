@@ -24,6 +24,11 @@ celery_app.conf.update(
             'task': 'webhooks.retry_due',
             'schedule': 30.0,
             'args': (100,),
-        }
+        },
+        'cleanup-retention-daily': {
+            'task': 'maintenance.cleanup_retention',
+            'schedule': 86400.0,
+            'args': (14,),
+        },
     },
 )
