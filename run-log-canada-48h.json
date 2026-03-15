@@ -1,0 +1,74 @@
+[
+  {
+    "term": "Senior PHP Laravel Developer",
+    "site": "indeed",
+    "rows": 0,
+    "status": "ok"
+  },
+  {
+    "term": "Senior PHP Laravel Developer",
+    "site": "linkedin",
+    "rows": 6,
+    "status": "ok"
+  },
+  {
+    "term": "Senior PHP Laravel Developer",
+    "site": "zip_recruiter",
+    "rows": 0,
+    "status": "ok"
+  },
+  {
+    "term": "Senior Frontend Developer (React or Vue)",
+    "site": "indeed",
+    "rows": 6,
+    "status": "ok"
+  },
+  {
+    "term": "Senior Frontend Developer (React or Vue)",
+    "site": "linkedin",
+    "rows": 6,
+    "status": "ok"
+  },
+  {
+    "term": "Senior Frontend Developer (React or Vue)",
+    "site": "zip_recruiter",
+    "rows": 0,
+    "status": "ok"
+  },
+  {
+    "term": "SEO Specialist",
+    "site": "indeed",
+    "rows": 6,
+    "status": "ok"
+  },
+  {
+    "term": "SEO Specialist",
+    "site": "linkedin",
+    "rows": 6,
+    "status": "ok"
+  },
+  {
+    "term": "SEO Specialist",
+    "site": "zip_recruiter",
+    "rows": 0,
+    "status": "ok"
+  },
+  {
+    "term": "Senior Full Stack Developer (React, TypeScript, Node or PHP)",
+    "site": "indeed",
+    "rows": 6,
+    "status": "ok"
+  },
+  {
+    "term": "Senior Full Stack Developer (React, TypeScript, Node or PHP)",
+    "site": "linkedin",
+    "rows": 1,
+    "status": "ok"
+  },
+  {
+    "term": "Senior Full Stack Developer (React, TypeScript, Node or PHP)",
+    "site": "zip_recruiter",
+    "rows": 0,
+    "status": "ok"
+  }
+]

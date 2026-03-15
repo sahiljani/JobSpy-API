@@ -1,0 +1,1469 @@
+"id","site","job_url","job_url_direct","title","company","location","date_posted","job_type","salary_source","interval","min_amount","max_amount","currency","is_remote","job_level","job_function","listing_type","emails","description","company_industry","company_url","company_logo","company_url_direct","company_addresses","company_num_employees","company_revenue","company_description","skills","experience_range","company_rating","company_reviews_count","vacancy_count","work_from_home_type","source_search_term","source_site"
+"li-4384380594","linkedin","https://www.linkedin.com/jobs/view/4384380594","","PHP - Sr. Software Developer I - Video Sharing Platforms","Aylo","Greater Montreal, Quebec, Canada","2026-03-13","","","","","","",False,"","","","","","","https://lu.linkedin.com/company/ayloservices","","","","","","","","","","","","","Senior PHP Laravel Developer","linkedin"
+"li-4378971689","linkedin","https://www.linkedin.com/jobs/view/4378971689","","Senior Software Developer","Canada Life","Toronto, Ontario, Canada","2026-03-13","","","","","","",False,"","","","","","","https://ca.linkedin.com/company/canada-life","","","","","","","","","","","","","Senior PHP Laravel Developer","linkedin"
+"li-4383137595","linkedin","https://www.linkedin.com/jobs/view/4383137595","","Sr. Front End Developer","Borrowell","Toronto, Ontario, Canada","2026-03-13","","","","","","",False,"","","","","","","https://ca.linkedin.com/company/borrowell","","","","","","","","","","","","","Senior PHP Laravel Developer","linkedin"
+"li-4378981527","linkedin","https://www.linkedin.com/jobs/view/4378981527","","Senior Software Developer","Canada Life","London, Ontario, Canada","2026-03-13","","","","","","",False,"","","","","","","https://ca.linkedin.com/company/canada-life","","","","","","","","","","","","","Senior PHP Laravel Developer","linkedin"
+"li-4378977652","linkedin","https://www.linkedin.com/jobs/view/4378977652","","Senior Software Developer","Canada Life","Winnipeg, Manitoba, Canada","2026-03-13","","","","","","",False,"","","","","","","https://ca.linkedin.com/company/canada-life","","","","","","","","","","","","","Senior PHP Laravel Developer","linkedin"
+"li-4366534417","linkedin","https://www.linkedin.com/jobs/view/4366534417","","Senior Software Developer","AppDirect","Montreal, Quebec, Canada","","","","","","","",False,"","","","","","","https://www.linkedin.com/company/appdirect","","","","","","","","","","","","","Senior PHP Laravel Developer","linkedin"
+"in-4db126c539a954a7","indeed","https://ca.indeed.com/viewjob?jk=4db126c539a954a7","https://jobs.lever.co/zensurance/cf3623de-2b1c-454b-9f52-8352ffd8e476","Senior QA Software Developer","Zensurance","Toronto, ON, CA","2026-03-13","fulltime","","","","","",True,"","","","","**About Us:**
+Zensurance is redefining commercial insurance for Canadian businesses.  
+
+As a leading InsurTech, we make getting the right coverage simple, fast, and accessible through a digital\\-first experience. Our platform combines advanced technology with deep industry expertise to deliver tailored insurance solutions that help businesses thrive.  
+
+Zensurance has been recognized for its rapid growth and industry impact: **✅** **Deloitte’s Technology Fast 50 (2023, 2024, 2025\\)**
+✅**Deloitte’s Technology Fast 500 (2024, 2025\\)**
+✅ **Top Insurance Employers (2022\\)**  
+
+At Zensurance, we value ownership, collaboration, and innovation. Our team thrives on solving complex challenges, challenging the status quo, and making a real impact in an industry ready for change.  
+
+If you're looking to build something meaningful in a fast\\-growing, customer\\-focused company, we’d love to hear from you!  
+
+We’re looking for a Senior QA Software Developer to join our Core Group.
+
+
+
+Reporting to an Engineering Manager, you won’t just be testing \\- you’ll be designing the future of quality at Zensurance.
+
+
+
+The Core Group is the engine room of our platform, consisting of three specialized teams: Docs, Renewals and Pricing, and Core Red. Together, we build and maintain the robust insurance data suite, business rules, and documentation that define our customers' policies. Our stack is primarily MERN (MongoDB, Express, React, Node), and we’ve recently adopted PostgreSQL and BullMQ to push our capabilities even further.
+
+
+
+We’re looking for someone who treats quality as a feature, not a hurdle, and who is excited to help us scale a high\\-traffic insurance platform.
+
+
+This is a remote\\-first role within Canada. \\#LI\\-Remote
+### **Responsibilities:**
+
+**Automation \\& Framework Design**
+
+
+* **Scalable Frameworks:** Design, build, and maintain reusable test automation frameworks (integration, E2E, load) that minimize maintenance and maximize reliability. (
+* **Modern Tooling:** Leverage AI\\-assisted development and agentic coding workflows to accelerate test creation and stay ahead of the curve.
+* **Seamless Integration:** Partner with developers to bake automated tests directly into our CI/CD pipelines, ensuring quality is never an afterthought.
+
+**Product Quality \\& Strategy**
+
+
+* **Full\\-Spectrum Testing:** Balance automated suites with manual exploratory smoke testing and functional testing to ensure every user story meets our ""gold standard"" before release.
+* **System Resilience:** Identify coverage gaps and proactively propose improvements to reduce system fragility and long\\-term technical debt.
+* **Security \\& Accessibility:** Support our commitment to users by utilizing SAST/DAST tools for security and Axe/Lighthouse to ensure our products are accessible to everyone.
+
+**Leadership \\& Collaboration**
+
+
+* + **Technical Mentorship:** Guide intermediate and junior engineers on testing best practices and the responsible, efficient use of AI coding tools.
+	+ **Design Influence:** Actively participate in design discussions and Agile ceremonies to advocate for testability, maintainability, and clear acceptance criteria.
+	+ **Culture of Ownership:** Promote a shared responsibility for quality across the entire engineering team, documenting strategies and automation patterns for everyone to use.
+	+ **Data\\-Driven Improvement:** Monitor production incidents and operational data to turn real\\-world ""lessons learned"" into future quality improvements.
+### **Qualifications:**
+
+* University degree, college diploma in a technical field, or equivalent experience.
+
+
+* 5–8\\+ years of experience in Test Automation and Quality Assurance.
+
+
+* Strong experience with modern E2E automation frameworks (Playwright, Cypress, WebDriverIO, Selenium, or similar).
+
+
+* Experience with JavaScript and/or TypeScript.
+
+
+* Experience with unit and integration testing frameworks (Jest, Mocha, or similar).
+
+
+* Experience with API testing and automation.
+
+
+* Experience with BrowserStack or similar cross\\-browser testing platforms.
+
+
+* Experience with manual testing approaches (Functional, Exploratory, UAT).
+
+
+* Experience working within Agile/Scrum teams.
+
+
+* Ability to critically review and validate AI\\-generated outputs for correctness, security, and maintainability.
+
+
+* Strong communication skills and ability to collaborate cross\\-functionally.
+
+
+* Proven ability to take ownership of quality initiatives within a team.
+
+### **Nice to have:**
+
+* Experience with Salesforce or Salesforce\\-integrated systems.
+
+
+* Experience testing microservices and micro frontends.
+
+
+* Experience with monorepos or trunk\\-based development.
+
+
+* Experience with SonarCloud / SonarQube.
+
+
+* Experience with Infrastructure as Code (Terraform, AWS).
+
+
+* Experience building AI\\-assisted test generation workflows.
+
+
+* Experience with accessibility testing tools.
+
+
+* Familiarity with CI/CD pipelines (e.g., GitHub Actions).
+
+
+* Experience using AI\\-assisted development tools (e.g., GitHub Copilot, ChatGPT, or similar) to improve engineering efficiency.
+
+
+* Understanding of agentic coding concepts, including prompt engineering, AI\\-generated test case creation, and validating AI\\-produced code.
+
+
+$115,000 \\- $145,000 a year
+The salary range for this role is $115,000 to $145,000, not including the annual discretionary bonus and any additional performance\\-based incentives.  
+
+  
+
+The annual base salary range provided for this position is a nationwide market range and represents a broad range of salaries for this role across the country. The actual salary for this position will be determined by a number of factors, including the scope, complexity and location of the role; the skills, education, training, credentials and experience of the candidate; and other conditions of employment. As part of our comprehensive compensation and benefits program, employees may also be eligible for performance\\-based case incentive awards.
+**Join Our Engineering Team \\- Where Growth Meets Innovation**  
+
+At Zensurance, we believe engineering is more than just writing great code. It’s about learning, growing, and building something meaningful together. Our remote\\-first team is a place where you’ll be **challenged, supported, and encouraged** to thrive. Here’s what makes our team special:  
+
+✔ **A Leadership Team That’s Got Your Back**
+Our experienced and approachable engineering leaders aren’t just here to manage \\- they’re here to mentor, guide, and help you unlock your full potential.  
+
+✔ **Fuel Your Growth**
+We invest in your learning with **training budgets, professional development programs, and mentorship opportunities**. Want to explore a new tech stack or level up your skills? We can help get you there.  
+
+✔ **A Culture of Sharing \\& Support**
+From **Power\\-Ups and book clubs to tech talks and hackathons**, we believe in learning from each other. Have a cool idea or an interesting challenge? Let’s solve it together.  
+
+✔ **Hack, Build, and Innovate**
+Twice a year, we hit pause on our regular work for **company\\-wide hackathons**, giving you the chance to experiment, push boundaries, and build something awesome.  
+
+✔ **Clear Career Growth, No Guesswork**
+We don’t do vague career paths. Our **well\\-defined growth tracks** show you exactly what’s needed to take your career to the next level, in a way that aligns with your skills and ambitions.  
+
+And the best part? You’ll work on **exciting projects using cutting\\-edge technologies like TypeScript, NestJS microservices, and micro\\-frontends with React.** If you're looking for a team that values learning, collaboration, and impactful work, we’d love to meet you! **Benefits \\& Perks at Zensurance:**  
+
+At Zensurance, we know that when our people thrive, so does our business. That’s why we offer a flexible, people\\-first work environment designed to support your well\\-being, growth, and success.  
+
+ Work Your Way* Remote\\-first setup for added flexibility
+* Home office allowance to create a comfortable workspace
+* Top\\-tier tech: ""Office in a box"" with all necessary tech equipment
+* Half days before public holidays: Enjoy half days before long weekends
+
+  
+
+❤️ Your Health, Your Way* Flexible health and dental plans for families, including mental health support
+* Health \\& personal spending accounts to invest in wellness your way
+* Parental leave top\\-up, because family comes first
+
+  
+
+ Investing in Your Growth* Education assistance reimbursement for courses, conferences, books, and memberships
+* Opportunities to learn from industry experts and grow your career
+
+  
+
+ Staying Connected* Weekly Friday huddles to share updates and connect across teams
+* Virtual \\& in\\-person team\\-building events to strengthen our culture
+
+  
+
+We’re building something special. Come be a part of it! **Who We Are:**  
+
+Business is hard work, but insurance doesn’t have to be!  
+
+We empower business owners with simple, tech\\-driven insurance solutions through our online platform.  
+
+Our success is fueled by our team\\-oriented culture and four core values: **DELIVER –** We set ambitious goals and achieve them.**INCLUDE –** We foster an open and safe space for all.**INTEGRITY –** We do what’s right.
+I**NVENT –** We create straightforward, innovative solutions. **AI Tools and Your Interview:**  
+
+We know AI is a valuable tool, and you're welcome to use it to prepare for your interview. However, please don't use AI assistants during the live interview itself. We want to have an authentic conversation with you, and using AI during the interview could affect our evaluation of your suitability for the role.  
+
+Just so you know, we use an AI scribe to help us take notes and review interviews, ensuring a fair and clear process. **Diversity \\& Inclusion:**  
+
+Zensurance celebrates diversity and is committed to creating an inclusive environment. We welcome applications from all backgrounds and provide accommodations throughout the hiring process. If you need support, let us know, we’re here to help. **Thank You!**  
+
+We review every application with care to find the best fit for our team.  
+
+While we may take a little time to get back to you due to the high volume of applications we receive, know that a real human (not a bot!) is reviewing yours. We appreciate your patience and can't wait to learn more about you!  
+
+
+
+We may use artificial intelligence (AI) tools to support parts of the hiring process, such as reviewing applications, analyzing resumes, or assessing responses. These tools assist our recruitment team but do not replace human judgment. Final hiring decisions are ultimately made by humans. If you would like more information about how your data is processed, please contact us.","","https://ca.indeed.com/cmp/Zensurance-1","","","","","","","","","","","","","Senior Frontend Developer (React or Vue)","indeed"
+"in-7d0ca6267be33c82","indeed","https://ca.indeed.com/viewjob?jk=7d0ca6267be33c82","https://www.ocas.ca/careers/posting?id=431","Senior Software Developer - Contract","Ocas","Guelph, ON, CA","2026-03-13","contract","","","","","",False,"","","","","*Technology is reinventing higher education and at OCAS we play a vital role in helping shape this evolving landscape. We* *deliver dependable technology systems and business services to support our industry partners and create new pathways for learners exploring and applying to Ontario’s public* *colleges**.**Recently named a Waterloo Area Top Employer for the eleventh consecutive year, we’re looking for innovators who can bring their expertise and passion to our growing team.*  
+
+  
+
+This position is being offered as a 6\\-month contract to replace an existing vacancy. Depending on organizational needs and project developments, there is potential for the contract to be extended. This is a hybrid position requiring three days in our Guelph office each week. Our work days are 7\\.5 hours.
+
+
+
+We’re looking for an enthusiastic and experienced senior software developer to join our team. If you’re looking to champion your knowledge and skills from backend development to frontend clients, this is your opportunity.
+
+
+As a Senior Software Developer at OCAS, you’ll play an important role in developing the technology that helps hundreds of thousands of individuals, at home and around the globe, every year as they take the first step toward a brighter future through college. You’ll gain hands\\-on exposure across our software technology stack, which uses .NET/.NET Core on the backend, feeding MVC and Angular frontend websites.
+
+
+You’ll also participate in our modern DevOps culture as we invest in automation from the beginning with a Continuous Integration and Delivery pipeline. Our software solutions are hosted on a variety of infrastructures, from private data centres to PaaS containers in the Azure public cloud.
+
+
+As a member of the OCAS team, you’ll work with remarkable individuals who support each other in achieving high performance.
+
+
+**Responsibilities:**
+
+
+* Technical owner of several areas of the code base, often one or more entire applications
+* Produce clean, efficient code based on specifications/requirements
+* Lead and moderate the technical design process and discussions
+* Lead medium\\- and large\\-sized features with input from architects and/or technical leads
+* Perform concise code reviews across several software products
+* Help establish and maintain team’s coding standards
+* Decompose projects into tasks and sub\\-tasks and complete them in a reasonable time frame while using high\\-quality and efficient techniques
+* Lead the development of test plans
+* Architect, create, and optimize complex unit and integration test suites
+* Communicate status and blockers to their people leader and team
+* Make technical recommendations for the future growth and stability of the code base
+* Mentor other team members, including new hires, about software development patterns and practices, as well as OCAS processes and team workflows
+* Collaborate with management, other departments, and customers to identify end\\-user requirements
+
+**Qualifications:**
+
+
+* 5\\+ years of experience building custom software solutions
+* Proficiency in .NET C\\# including Entity Framework, Web API, and MVC
+* Proficiency in Javascript/Typescript, TailwindCss/SASS/LESS/CSS
+* Proficiency in SPA frameworks such as Angular, React
+* Proficiency in MS SQL
+* Strong understanding of complex software development concepts, such as containerization or software optimization
+* Experience architecting small\\- and medium\\-sized software solutions
+
+  
+
+
+
+The pay range for this role is $48 \\- $64/ hour depending on skill and previous experience.
+
+  
+
+
+
+Position reports to: Manager, Technology Solutions *OCAS is committed to fostering a diverse and inclusive workplace. We welcome and encourage applications from diverse candidates, including people with disabilities. Accommodations are available on request for candidates taking part in all aspects of the selection process.*","","https://ca.indeed.com/cmp/Ocas","https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/256x256/a22dd57d0e2db6b10ef1876bdb29ee18","https://www.ocas.ca/","","","","","","","","","","","Senior Frontend Developer (React or Vue)","indeed"
+"in-eb55e5798ca0328d","indeed","https://ca.indeed.com/viewjob?jk=eb55e5798ca0328d","https://jobs.dayforcehcm.com/en-US/ocas/CANDIDATEPORTAL/jobs/431","Senior Software Developer - Contract","OCAS Application Services Inc.","Guelph, ON, CA","2026-03-13","parttime","","","","","",False,"","","","","Technology is reinventing higher education and at OCAS we play a vital role in helping shape this evolving landscape. We deliver dependable technology systems and business services to support our industry partners and create new pathways for learners exploring and applying to Ontario’s public colleges.
+  
+Recently named a Waterloo Area Top Employer for the eleventh consecutive year, we’re looking for innovators who can bring their expertise and passion to our growing team.
+  
+  
+
+This position is being offered as a 6\\-month contract to replace an existing vacancy. Depending on organizational needs and project developments, there is potential for the contract to be extended. This is a hybrid position requiring three days in our Guelph office each week. Our work days are 7\\.5 hours.
+  
+We’re looking for an enthusiastic and experienced senior software developer to join our team. If you’re looking to champion your knowledge and skills from backend development to frontend clients, this is your opportunity.
+  
+As a Senior Software Developer at OCAS, you’ll play an important role in developing the technology that helps hundreds of thousands of individuals, at home and around the globe, every year as they take the first step toward a brighter future through college. You’ll gain hands\\-on exposure across our software technology stack, which uses .NET/.NET Core on the backend, feeding MVC and Angular frontend websites.
+  
+You’ll also participate in our modern DevOps culture as we invest in automation from the beginning with a Continuous Integration and Delivery pipeline. Our software solutions are hosted on a variety of infrastructures, from private data centres to PaaS containers in the Azure public cloud.
+  
+As a member of the OCAS team, you’ll work with remarkable individuals who support each other in achieving high performance.
+  
+  
+
+**Responsibilities:**  
+
+* Technical owner of several areas of the code base, often one or more entire applications
+* Produce clean, efficient code based on specifications/requirements
+* Lead and moderate the technical design process and discussions
+* Lead medium\\- and large\\-sized features with input from architects and/or technical leads
+* Perform concise code reviews across several software products
+* Help establish and maintain team’s coding standards
+* Decompose projects into tasks and sub\\-tasks and complete them in a reasonable time frame while using high\\-quality and efficient techniques
+* Lead the development of test plans
+* Architect, create, and optimize complex unit and integration test suites
+* Communicate status and blockers to their people leader and team
+* Make technical recommendations for the future growth and stability of the code base
+* Mentor other team members, including new hires, about software development patterns and practices, as well as OCAS processes and team workflows
+* Collaborate with management, other departments, and customers to identify end\\-user requirements
+
+
+**Qualifications:**  
+
+* 5\\+ years of experience building custom software solutions
+* Proficiency in .NET C\\# including Entity Framework, Web API, and MVC
+* Proficiency in Javascript/Typescript, TailwindCss/SASS/LESS/CSS
+* Proficiency in SPA frameworks such as Angular, React
+* Proficiency in MS SQL
+* Strong understanding of complex software development concepts, such as containerization or software optimization
+* Experience architecting small\\- and medium\\-sized software solutions
+
+
+The pay range for this role is $48 \\- $64/ hour depending on skill and previous experience.
+  
+  
+
+**Position reports to:** Manager, Technology Solutions
+  
+  
+
+OCAS is committed to fostering a diverse and inclusive workplace. We welcome and encourage applications from diverse candidates, including people with disabilities. Accommodations are available on request for candidates taking part in all aspects of the selection process.","","https://ca.indeed.com/cmp/Ocas-Application-Services-Inc.","","","","","","","","","","","","","Senior Frontend Developer (React or Vue)","indeed"
+"in-c8457219d90e0cf8","indeed","https://ca.indeed.com/viewjob?jk=c8457219d90e0cf8","https://jane.app/careers/31a9e38d-1ca3-4d68-8ea1-a0e397b32413/senior-software-developer-frontend-foundations","Senior Software Developer - Frontend Foundations","Jane.app","CA","2026-03-13","","","","","","",True,"","","","","**About the Role**
+------------------
+
+
+Hi, I'm Hunter, the Development Manager for the Frontend Foundations team at Jane. The thing I care most about is simple: building an environment where the people around me can do the best work of their careers.
+
+
+For our team, that means enabling Janers with the platforms and tools that allow them to focus on solving the problems unique to their domains. We own the systems and standards that every product team at Jane builds on: Module Federation, build tooling, our Burrito design system across web and React Native, observability, and the long migration away from a decade of legacy patterns. When we do our job well, product teams move faster and ultimately help more clinics care for their patients. That's the direct line from our work to Jane's mission.
+
+
+Outside of work, you'll find me dabbling in a series of eclectic interests: permaculture, pottery, music, gaming. I'm drawn to the spaces where everything overlaps and informs everything else, all things can be conjoined!
+
+
+We're at a pivotal moment at Jane. Our frontend platform is actively evolving: replacing legacy patterns with modern, scalable infrastructure; expanding our design system to mobile via React Native; and building the tooling that makes platform work feel invisible to the teams that depend on it. This role exists because we need someone who can take complex, defined work and execute it with craft and ownership. You won't be handed easy tickets. You'll be handed hard ones and trusted to drive them to done.
+
+
+The team you'd be joining is curious, connected, collaborative, and genuinely excited about AI\\-native development. We move fast, care about quality, and believe platform work is some of the most meaningful engineering you can do. If you're energized by deep technical execution, like leaving things better than you found them, and want to make every developer at Jane's life a little easier, I'd love to chat.
+
+**What Impact We're Looking for You to Make**
+---------------------------------------------
+
+* Lead medium\\-complexity platform projects end\\-to\\-end, from design through delivery and post\\-release ownership, with minimal direction: JS tooling, build systems, Module Federation infrastructure, and other improvements that make the whole frontend ecosystem more reliable.
+* Contribute fluently to our Module Federation infrastructure, working within established patterns and defining new expansions and systems to support scaling.
+* Improve developer experience through automation, tooling improvements, and a consistent habit of improving the area you’re working in.
+* Participate actively in Burrito, our design system, helping maintain component quality, test coverage, and documentation standards across web and React Native.
+* Show up as a strong peer: thorough code reviews, clear async communication, and an instinct for unblocking yourself and others without needing a lot of hand\\-holding.
+* Advocate for pragmatic AI adoption on the team: identify high\\-value integration points, mentor others on effective AI workflows, and help standardize what works.
+
+**What Experience We Need**
+---------------------------
+
+* Significant professional experience as a frontend or platform engineer, with a track record of independently leading and shipping medium\\-complexity projects through the full SDLC.
+* Strong JavaScript fundamentals and hands\\-on experience with modern frontend build tooling \\- webpack, rspack, Vite, or similar. You know what's happening under the hood.
+* Familiarity with Module Federation is a strong advantage. You don't need to have designed a topology, but you should know what a remote is, why shared dependencies matter, and working experience in an MF environment.
+* You create clean, well\\-tested, documented code as a default.
+* Familiarity with observability tooling (Sentry, Datadog, or similar) and a habit of using data to validate your work.
+* AI is already part of how you work. You've developed genuine judgment about where it helps and where it doesn't.
+
+
+If you don't meet every single qualification but are excited about this role, we'd still love to hear from you.
+
+**More About Jane**
+-------------------
+
+
+Jane is a founder\\-led, high\\-growth SaaS company born in North Vancouver, British Columbia. We’re now a team of more than 700 people working remotely across Canada, the US, and the UK, united by our mission to help the helpers.
+
+
+We build the products and tools that thousands of clinics rely on every day to run their businesses, care for their patients, and grow their communities. That level of impact means every person at Jane plays an important role in how we show up for our customers. We’re all responsible for being deeply connected to their needs, obsessed with improving their experience, and proud of the difference our work makes in their day\\-to\\-day lives.
+
+
+Jane is growing fast, and that growth brings exciting challenges that call for adaptability, resilience, learning agility, and humility. We’re proud of what we’ve built and quick to admit what we don’t know yet. We listen, learn, and adjust as we go.
+
+
+We’re also embracing the possibilities of AI, using it to work smarter, improve our systems, and create even better experiences for our customers and our team.
+
+
+Our goal isn’t just delivery, it’s delight. We move quickly, communicate openly, and solve real problems together. If you’re energized by ambiguity, motivated by impact, and eager to learn with others, you’ll thrive at Jane.
+
+**Compensation \\& Benefits**
+----------------------------
+
+
+At Jane, we’re committed to paying fairly, clearly, and above all, paying for growth. This role has an annual salary range of **$128,00 to $200,000**. While that is a large range, it is intentional. It reflects the full growth journey someone might take in the role, from developing skills early on to becoming highly proficient and ultimately achieving excellence.
+
+
+Most new hires join at the **accomplished** stage, which for this role represents an annual salary of **$152,000**. A starting salary below this typically indicates a candidate with strong potential who is still developing key skills. Salaries above this usually apply to existing team members who have made a significant impact and bring deep Jane\\-specific knowledge.
+
+
+We believe in *paying for growth*. You’ll have regular career development conversations with your manager and your compensation will grow as you gain experience and contribute meaningfully to our mission.
+
+
+Paying clearly is one of our compensation fundamentals **this** You’re also encouraged to ask questions about compensation at any point during the interview process.
+
+
+We also offer a comprehensive benefits package,","","https://ca.indeed.com/cmp/Jane.app","https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/256x256/ac85c03a447578d5ba11395351293b3a","https://jane.app","","","","","","","","","","","Senior Frontend Developer (React or Vue)","indeed"
+"in-793e432e3b437d3e","indeed","https://ca.indeed.com/viewjob?jk=793e432e3b437d3e","http://ca.indeed.com/job/senior-c-azure-developer-793e432e3b437d3e","Senior C# / Azure Developer","CodeHire Global Solutions","Vancouver, BC, CA","2026-03-13","fulltime","","","","","",True,"","","","","Job Overview
+
+We are seeking an experienced **Senior C\\#/Azure Developer** with a strong background in enterprise software development. The ideal candidate will have extensive experience in **C\\#, SQL, and cloud technologies**, along with the ability to design, develop, and maintain scalable applications in a fast\\-paced environment.
+
+This role requires a strong focus on **quality, performance, and testable code**, along with the ability to collaborate with cross\\-functional teams and deliver high\\-quality solutions.
+
+**Note:** Only **local candidates in Vancouver, BC** will be considered. No relocation.
+
+Key Responsibilities
+
+* Design, develop, and maintain enterprise\\-level applications using **C\\# and .NET technologies**.
+* Build and optimize **SQL databases and backend services**.
+* Develop and deploy applications on **Azure cloud platforms**.
+* Work with modern **frontend frameworks such as Angular or React** when required.
+* Ensure high standards for **code quality, performance, scalability, and testability**.
+* Collaborate with product teams and stakeholders to understand requirements and deliver solutions.
+* Participate in **design discussions, code reviews, and architecture decisions**.
+
+Required Qualifications
+
+* **10\\+ years of software development experience** in enterprise environments.
+* Strong expertise in **C\\# and SQL development**.
+* Experience working with **.NET and Azure**.
+* Experience developing **cloud\\-hosted applications**.
+* Strong problem\\-solving and analytical skills.
+* Excellent **written and verbal communication skills**.
+* Ability to work independently with minimal supervision.
+
+Preferred / Nice to Have Skills
+
+* Experience with **Angular or React**.
+* Knowledge of **AWS cloud services**.
+* Experience with **SSO authentication systems**.
+* Experience working in **enterprise\\-scale environments**.
+
+Education
+
+* **Diploma or Bachelor’s Degree in Computer Science** or related field.
+
+Additional Skills
+
+* Strong time management and organizational abilities
+* Customer\\-facing communication skills
+* Flexibility to work across different development projects
+* Passion for learning and adopting new technologies
+
+Pay: $110,000\\.00\\-$120,000\\.00 per year
+
+Work Location: Hybrid remote in Vancouver, BC V5Z 1C6","","https://ca.indeed.com/cmp/Codehire-Global-Solutions","","","","","","","","","","","","","Senior Frontend Developer (React or Vue)","indeed"
+"in-3411aac50c06a72d","indeed","https://ca.indeed.com/viewjob?jk=3411aac50c06a72d","https://meredith.wd5.myworkdayjobs.com/en-US/EXT/job/Edmonton-AB---10160-103-St-NW/Internal-Tools-Platform-Intern_JR15316","Internal Tools Platform Intern","People Inc.","Edmonton, AB, CA","2026-03-13","fulltime","","","","","",False,"","","","hr@people.inc","Job Title
+Internal Tools Platform Intern
+Job Description
+This internship will start May 2026 and wrap up June 2027\\.
+About People Inc:
+People Inc. is America’s largest digital and print publisher. Our 40\\+ iconic and fast\\-growing brands harness the best intent\\-driven content, the fastest sites, and the fewest ads to help nearly 200 million people every month, including 95 percent of US women, make decisions, take action, and find inspiration. People Inc. brands include PEOPLE, Better Homes \\& Gardens, Verywell, FOOD \\& WINE, The Spruce, Allrecipes, Byrdie, REAL SIMPLE, Investopedia, Southern Living and more.
+About Your Team:
+The Internal Tools Platform team builds and maintains internal application and service frameworks used by engineering teams across People Inc. The team works on a variety of projects including CLI tooling, frontend component libraries, and cutting edge AI\\-native workflows.
+About the Intern Role:
+People Inc. is looking for an eager 3rd or 4th year student looking to learn and grow in a fast\\-paced environment. You will have the opportunity to build out new functionality within our tooling platform under the guidance of highly experienced and talented Senior and Principal engineers, exposing you to and deepening your knowledge of JavaScript/TypeScript, Vue, Node, Deno, and more.
+Internship Responsibilities will Include:* Contribute to the development and maintenance of our internal CLI tooling and plugin ecosystem, implementing new commands and improving developer experience
+* Build and enhance reusable frontend components within our Vue\\-based component library, ensuring consistency and accessibility across internal applications
+* Assist in developing full stack features across our internal app framework, spanning both API endpoints and frontend interfaces
+* Write clean, well\\-documented TypeScript/JavaScript code and participate in code reviews to learn best practices from senior and principal engineers
+* Engage in agile ceremonies (standups, sprint planning, retrospectives) and contribute to a collaborative, fast\\-paced engineering team
+
+
+About You:
+You are a curious and driven engineering student with a genuine passion for learning and building. You're comfortable diving into unfamiliar problems, asking thoughtful questions, and iterating quickly based on feedback. You take ownership of your work, communicate openly with your team, and care about the quality of what you ship. You're as comfortable collaborating with experienced engineers as you are working independently to figure things out. Most importantly, you bring a growth mindset — you see every challenge as an opportunity to deepen your skills and make a meaningful contribution.
+Candidates for this role should have:* Currently enrolled in a 3rd or 4th year Computer Science, Software Engineering, or related post\\-secondary program
+* Foundational knowledge of JavaScript/TypeScript and experience building with Node.js or similar server\\-side runtimes
+* Familiarity with component\\-based frontend frameworks such as Vue, React, or Angular
+* Basic understanding of RESTful API design and consumption
+* Exposure to version control workflows using Git, including branching, pull requests, and code reviews
+* A collaborative mindset with strong communication skills and a willingness to ask questions and learn from experienced engineers
+
+
+It is the policy of People Inc. to provide employment opportunities regardless of age, physical or mental disability, race, gender, sex, sexual orientation, or any other characteristic protected by applicable laws. In addition, the Company will provide reasonable accommodations for qualified individuals with disabilities. Accommodation requests can be made by emailing hr@people.inc.
+\\#NMG\\#","","https://ca.indeed.com/cmp/People-Inc.-9df9f9c4","https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/256x256/acd1fd9cfdedf697f1407e12b1116f25","https://www.people.inc/","New York City, NY","1,001 to 5,000","","Essential Brands. Undeniable Impact.","","","","","","","Senior Frontend Developer (React or Vue)","indeed"
+"li-4385185362","linkedin","https://www.linkedin.com/jobs/view/4385185362","","Senior Software Engineer","H2 Analytics","","2026-03-13","","","","","","",False,"","","","","","","https://ca.linkedin.com/company/h2analytics","","","","","","","","","","","","","Senior Frontend Developer (React or Vue)","linkedin"
+"li-4385187303","linkedin","https://www.linkedin.com/jobs/view/4385187303","","Senior Software Engineer - Custom Projects","H2 Analytics","","2026-03-13","","","","","","",False,"","","","","","","https://ca.linkedin.com/company/h2analytics","","","","","","","","","","","","","Senior Frontend Developer (React or Vue)","linkedin"
+"li-4383141863","linkedin","https://www.linkedin.com/jobs/view/4383141863","","Senior Software Developer","Xplore Inc.","Markham, Ontario, Canada","2026-03-13","","","","","","",False,"","","","","","","https://ca.linkedin.com/company/xplore-ca","","","","","","","","","","","","","Senior Frontend Developer (React or Vue)","linkedin"
+"li-4383150435","linkedin","https://www.linkedin.com/jobs/view/4383150435","","Senior Software Developer","Xplore Inc.","Fredericton, New Brunswick, Canada","2026-03-13","","","","","","",False,"","","","","","","https://ca.linkedin.com/company/xplore-ca","","","","","","","","","","","","","Senior Frontend Developer (React or Vue)","linkedin"
+"li-4385878373","linkedin","https://www.linkedin.com/jobs/view/4385878373","","Dévelopeur logiciel senior - UI/ Senior Software Engineer - UI","TAIT","Montreal, Quebec, Canada","","","","","","","",False,"","","","","","","https://www.linkedin.com/company/tait-towers","","","","","","","","","","","","","Senior Frontend Developer (React or Vue)","linkedin"
+"li-4374635197","linkedin","https://www.linkedin.com/jobs/view/4374635197","","Senior Software Engineer, Full-Stack (Trust & Safety)","Affirm","Toronto, Ontario, Canada","","","","","","","",False,"","","","","","","https://www.linkedin.com/company/affirm","","","","","","","","","","","","","Senior Frontend Developer (React or Vue)","linkedin"
+"in-04f4e735d96f6a5c","indeed","https://ca.indeed.com/viewjob?jk=04f4e735d96f6a5c","https://careers.accor.com/global/en/job/content-marketing-manager-in-fairmont-hotel-vancouver-vancouver-canada-jid-88543","Content Marketing Manager","Accor","Vancouver, BC, CA","2026-03-14","fulltime","","","","","",False,"","","","","Company Description  
+
+Experience the magic of working at Fairmont Hotel Vancouver, a timeless Vancouver landmark known as the ‘Castle in the City’. With its majestic chateau\\-style architecture, copper green roof, and historic gargoyles, this stunning hotel has been captivating visitors since 1939\\. Located in the heart of downtown Vancouver on prestigious Georgia Street, the hotel is surrounded by a dynamic arts scene, vibrant shopping, exciting nightlife, and world\\-class dining. Join our cherished team, and be part of an unforgettable hospitality experience. You’ll help create lasting memories for our guests in a setting that’s as exceptional as you are!
+
+  
+
+Job Description **Content Marketing Manager**
+
+
+At Fairmont Hotels \\& Resorts, our Marketing professionals are ambassadors of the engaging service and authentically local experiences we offer in places of unrivalled presence. Showcase your creative flair and interpersonal skills as Content Marketing Manager, where you will grow our market share with exciting promotional campaigns that showcase our exceptional guest offerings.
+
+
+Reporting to the Director of Marketing, the Content Marketing Manager will provide daily support and be a contributing member of an extraordinary Marketing Team. Here is the impact you’ll make and what we will accomplish together:
+
+**What Is in It for You**
+
+* An inclusive, empowering company culture where people are at the heart of everything we do
+* The opportunity to work alongside passionate hospitality professionals committed to making the world a more welcoming place
+* Competitive annual compensation of $70,000, with salary reviews conducted annually based on performance, demonstrated capabilities, and market conditions.
+* Complimentary meals during your shift through our Colleague Dining Program
+* Complimentary dry\\-cleaning of business attire
+* Exclusive access to the Pacific Northwest Food \\& Beverage Discount Program, with 50% off at our dining destinations in Vancouver, Victoria, and Whistler
+* Travel reimbursement program for a TransLink monthly pass
+* Extensive benefits package including health, dental, vision, life, and disability insurance for those meeting eligibility requirements
+* Company\\-matched pension plan and the option to enroll in the Group Registered Retirement Savings Plan
+* 10 days of paid vacation annually, increasing with service, along with 12 statutory holidays and paid birthday leave
+* Complimentary hotel stay for newly hired colleagues, including breakfast for two through our BE OUR GUEST program
+* Colleague benefit card offering discounted room and F\\&B rates at Accor properties worldwide
+* The opportunity to work in a luxury hotel environment within a Vancouver heritage building, dating back to 1939
+* Learning programs designed to sharpen your skills
+* Opportunities to contribute through Corporate Social Responsibility activities
+
+**What You Will Be Doing**
+
+**Content Creation**
+
+* You love benchmarking, researching competitive products, and evaluating product characteristics and emerging trends to come up with innovative ideas to help propel the HVC brand forward.
+* Plan and manage photography and videography branded content shoots.
+* Collaborate with teams cross\\-departmentally on various marketing projects, brand activations and events – this includes preparing internal documents to communicate details with operations teams.
+* Plan, manage and execute social media photography and video shoots in collaboration with the Director of Marketing, to create new and engaging content on an ongoing basis.
+* Create engaging storytelling content to be shared across HVC’s social media channels, including but not limited to F\\&B offerings, event promotion, PR highlights and coverage, and supporting blog initiatives.
+* Work with the Mar/Comm team on idea generation and execution of new blog content to showcase unique opportunities at the hotel and highlight Vancouver as a year\\-round destination.
+* Assist the Director of Marketing in gathering content for on\\-site submissions for corporate campaigns and promotions.
+
+**Content Updates \\& Reputation Management**
+
+* Work closely with Digital Marketing, Revenue and Sales Teams to ensure all third party (OTA) booking websites, Tour \\& FIT company websites contain accurate content (description and photos) of our hotel and products. (Booking.com, Inntopia, Expedia, Accor HOD, CVent, etc.
+* Responsible for organizing and updating all approved hotel photography to the Visiting Media TrueTour platform used by regional sales team.
+* Responsible for managing photo shoot documents including release forms, and getting new video and photo content added to the corporate content DAM
+
+**Website Management**
+
+* Manage our owned website content, including menu updates, creating events, seasonal landing pages including creating new content on Fairmont.com, HVC Microsite, Notch8 website, etc.
+* Liaise with Director of Marketing and Regional Digital Marketing team to support SEO optimization for new website content.
+
+**Social Media**
+
+* Create engaging social media content and storytelling pieces to ensure that HVC’s channels are always current, engaging and aligned with the regional campaigns and initiatives.
+* Manage all social media platforms (Facebook, Twitter, Instagram, LinkedIn, Pinterest, YouTube) with support from the Director of Marketing and Regional Digital Marketing team.
+* Liaise with the Director of Marketing and Regional Director of Digital Marketing to establish an annual social media marketing plan and establish goals.
+* Update monthly social media reports for monthly Marketing / Sales meetings
+* Take a proactive approach in identifying and showcasing unique offerings, hotel activations and F\\&B stories by coordinating with the Director of Marketing and HVC’s F\\&B team.
+* Improve efficiencies and effectiveness of event marketing with a focus on promoting events on social media and creating live content during each event.
+* Plan, execute and adapt monthly social media content calendars to ensure support of all hotel initiatives.
+* Work closely with Regional Digital Marketing team to supply and create visual graphics and content for paid social promotions.
+* Organize social media contests based on goals to drive engagement, gain followers, signups, etc.
+
+**Ongoing**
+
+* Oversee and coordinate content creator visits. Work with PR specialist to arrange overnight stays, FAMS, dinners, site inspections, etc. Evening and weekend attendance is expected as required.
+* Create list of content creators for applicable media event invites
+* Attend and participate in all required meetings (monthly marketing meetings, sales meetings, regional marketing meetings, etc.)
+* Contribute to the development of the Marketing team’s seasonal and annual marketing plan
+* Assist in the development of presentation templates, content and slides for internal meetings
+* To be Health \\& Safety conscious and actively involved in maintaining a safe work environment.
+* Complies with Fairmont Hotels \\& Resorts policies, procedures and code of ethics.
+* Performs any and all other tasks which are assigned by management.
+* Adhering to all Fairmont Hotels \\& Resorts sales standard and uphold the highest standard of internal and external customer service at all times.
+
+  
+
+Qualifications **What We're Looking For**
+
+* Bachelor’s degree in Marketing, Communications, or a related field
+* 3–5\\+ years of marketing experience, ideally within the hospitality or luxury sectors
+* Proven experience in content marketing, digital marketing, and e\\-commerce management
+* Demonstrated ability to develop, execute, and optimize creative content campaigns across multiple channels
+* Experience managing social media, email marketing, and website content
+* Strong understanding of brand storytelling, marketing principles, and emerging content trends
+* Ability to manage marketing budgets and resources to maximize campaign ROI
+* Strong analytical skills and data\\-driven approach for content performance evaluation
+* Experience with analytics tools such as GA4, Tableau, OTA extranet dashboards, and media agency reports
+* Familiarity with hotel distribution systems (CRS, PMS, connected partners) and hospitality sales platforms (Opera, Delphi) is an advantage
+* Proven ability to build relationships and drive new business through networking, site inspections, and sales calls
+* Experience collaborating with external vendors, agencies, and media partners
+* A strong network with luxury travel and lifestyle publications (e.g., Forbes, Condé Nast Traveler, Travel \\+ Leisure, Michelin Guide) is a plus
+* Excellent written and verbal communication skills with strong storytelling abilities
+* Collaborative and team\\-oriented approach, supporting overall hotel goals
+* Ability to translate data insights into actionable content strategies
+* Strong project management, organizational, and time\\-management skills
+* Ability to manage multiple projects simultaneously with attention to detail
+* Responsible, reliable, results\\-oriented, and flexible in a dynamic environment
+* Professional demeanor: calm, courteous, and solution\\-focused under pressure
+* Proficient in Microsoft Office Suite
+
+**Physical Requirements**
+
+* Ability to stand and walk for extended periods
+* Capacity to lift and carry up to 30 lbs
+* Frequent bending, kneeling, pushing, pulling, and stair use
+
+  
+
+Additional Information **Visa Requirements:**  
+
+Must be legally eligible to work in Canada. The hotel is unable to assist candidates in obtaining Canadian work authorization.
+
+**Our commitment to Diversity \\& Inclusion:**  
+
+We are an inclusive company and our ambition is to attract, recruit and promote diverse talent.  
+
+  
+
+**Why work for Accor?**  
+
+We are far more than a worldwide leader. We welcome you as you are and you can find a job and brand that matches your personality. We support you to grow and learn every day, making sure that work brings purpose to your life, so that during your journey with us, you can continue to explore Accor’s limitless possibilities.  
+
+By joining Accor, every chapter of your story is yours to write and together we can imagine tomorrow's hospitality. Discover the life that awaits you at Accor, visit https://careers.accor.com
+
+
+Do what you love, care for the world, dare to challenge the status quo! **\\#BELIMITLESS**","Restaurants Travel And Leisure","https://ca.indeed.com/cmp/Accor","https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/256x256/eaff30a751d077870ddf324a72d24ea6","http://careers.accor.com","82, rue Henri Farman - 92130 Issy-les-Moulineaux - France","10,000+","$1B to $5B (USD)","To become a Heartist® is to live a unique experience where every personality and every action counts.","","","","","","","SEO Specialist","indeed"
+"in-8891a3aaf8522de6","indeed","https://ca.indeed.com/viewjob?jk=8891a3aaf8522de6","https://jobs.smartrecruiters.com/AccorHotel/744000114809676-content-marketing-manager","Content Marketing Manager","Fairmont","Vancouver, BC, CA","2026-03-14","fulltime","","","","","",False,"","","","","**Company Description**  
+
+Experience the magic of working at Fairmont Hotel Vancouver, a timeless Vancouver landmark known as the ‘Castle in the City’. With its majestic chateau\\-style architecture, copper green roof, and historic gargoyles, this stunning hotel has been captivating visitors since 1939\\. Located in the heart of downtown Vancouver on prestigious Georgia Street, the hotel is surrounded by a dynamic arts scene, vibrant shopping, exciting nightlife, and world\\-class dining. Join our cherished team, and be part of an unforgettable hospitality experience. You’ll help create lasting memories for our guests in a setting that’s as exceptional as you are!
+
+ **Job Description** **Content Marketing Manager**
+
+
+At Fairmont Hotels \\& Resorts, our Marketing professionals are ambassadors of the engaging service and authentically local experiences we offer in places of unrivalled presence. Showcase your creative flair and interpersonal skills as Content Marketing Manager, where you will grow our market share with exciting promotional campaigns that showcase our exceptional guest offerings.
+
+
+Reporting to the Director of Marketing, the Content Marketing Manager will provide daily support and be a contributing member of an extraordinary Marketing Team. Here is the impact you’ll make and what we will accomplish together:
+
+**What Is in It for You**
+
+* An inclusive, empowering company culture where people are at the heart of everything we do
+* The opportunity to work alongside passionate hospitality professionals committed to making the world a more welcoming place
+* Competitive annual compensation of $70,000, with salary reviews conducted annually based on performance, demonstrated capabilities, and market conditions.
+* Complimentary meals during your shift through our Colleague Dining Program
+* Complimentary dry\\-cleaning of business attire
+* Exclusive access to the Pacific Northwest Food \\& Beverage Discount Program, with 50% off at our dining destinations in Vancouver, Victoria, and Whistler
+* Travel reimbursement program for a TransLink monthly pass
+* Extensive benefits package including health, dental, vision, life, and disability insurance for those meeting eligibility requirements
+* Company\\-matched pension plan and the option to enroll in the Group Registered Retirement Savings Plan
+* 10 days of paid vacation annually, increasing with service, along with 12 statutory holidays and paid birthday leave
+* Complimentary hotel stay for newly hired colleagues, including breakfast for two through our BE OUR GUEST program
+* Colleague benefit card offering discounted room and F\\&B rates at Accor properties worldwide
+* The opportunity to work in a luxury hotel environment within a Vancouver heritage building, dating back to 1939
+* Learning programs designed to sharpen your skills
+* Opportunities to contribute through Corporate Social Responsibility activities
+
+**What You Will Be Doing**
+
+**Content Creation**
+
+* You love benchmarking, researching competitive products, and evaluating product characteristics and emerging trends to come up with innovative ideas to help propel the HVC brand forward.
+* Plan and manage photography and videography branded content shoots.
+* Collaborate with teams cross\\-departmentally on various marketing projects, brand activations and events – this includes preparing internal documents to communicate details with operations teams.
+* Plan, manage and execute social media photography and video shoots in collaboration with the Director of Marketing, to create new and engaging content on an ongoing basis.
+* Create engaging storytelling content to be shared across HVC’s social media channels, including but not limited to F\\&B offerings, event promotion, PR highlights and coverage, and supporting blog initiatives.
+* Work with the Mar/Comm team on idea generation and execution of new blog content to showcase unique opportunities at the hotel and highlight Vancouver as a year\\-round destination.
+* Assist the Director of Marketing in gathering content for on\\-site submissions for corporate campaigns and promotions.
+
+**Content Updates \\& Reputation Management**
+
+* Work closely with Digital Marketing, Revenue and Sales Teams to ensure all third party (OTA) booking websites, Tour \\& FIT company websites contain accurate content (description and photos) of our hotel and products. (Booking.com, Inntopia, Expedia, Accor HOD, CVent, etc.
+* Responsible for organizing and updating all approved hotel photography to the Visiting Media TrueTour platform used by regional sales team.
+* Responsible for managing photo shoot documents including release forms, and getting new video and photo content added to the corporate content DAM
+
+**Website Management**
+
+* Manage our owned website content, including menu updates, creating events, seasonal landing pages including creating new content on Fairmont.com, HVC Microsite, Notch8 website, etc.
+* Liaise with Director of Marketing and Regional Digital Marketing team to support SEO optimization for new website content.
+
+**Social Media**
+
+* Create engaging social media content and storytelling pieces to ensure that HVC’s channels are always current, engaging and aligned with the regional campaigns and initiatives.
+* Manage all social media platforms (Facebook, Twitter, Instagram, LinkedIn, Pinterest, YouTube) with support from the Director of Marketing and Regional Digital Marketing team.
+* Liaise with the Director of Marketing and Regional Director of Digital Marketing to establish an annual social media marketing plan and establish goals.
+* Update monthly social media reports for monthly Marketing / Sales meetings
+* Take a proactive approach in identifying and showcasing unique offerings, hotel activations and F\\&B stories by coordinating with the Director of Marketing and HVC’s F\\&B team.
+* Improve efficiencies and effectiveness of event marketing with a focus on promoting events on social media and creating live content during each event.
+* Plan, execute and adapt monthly social media content calendars to ensure support of all hotel initiatives.
+* Work closely with Regional Digital Marketing team to supply and create visual graphics and content for paid social promotions.
+* Organize social media contests based on goals to drive engagement, gain followers, signups, etc.
+
+**Ongoing**
+
+* Oversee and coordinate content creator visits. Work with PR specialist to arrange overnight stays, FAMS, dinners, site inspections, etc. Evening and weekend attendance is expected as required.
+* Create list of content creators for applicable media event invites
+* Attend and participate in all required meetings (monthly marketing meetings, sales meetings, regional marketing meetings, etc.)
+* Contribute to the development of the Marketing team’s seasonal and annual marketing plan
+* Assist in the development of presentation templates, content and slides for internal meetings
+* To be Health \\& Safety conscious and actively involved in maintaining a safe work environment.
+* Complies with Fairmont Hotels \\& Resorts policies, procedures and code of ethics.
+* Performs any and all other tasks which are assigned by management.
+* Adhering to all Fairmont Hotels \\& Resorts sales standard and uphold the highest standard of internal and external customer service at all times.
+
+  
+
+**Qualifications** **What We're Looking For**
+
+* Bachelor’s degree in Marketing, Communications, or a related field
+* 3–5\\+ years of marketing experience, ideally within the hospitality or luxury sectors
+* Proven experience in content marketing, digital marketing, and e\\-commerce management
+* Demonstrated ability to develop, execute, and optimize creative content campaigns across multiple channels
+* Experience managing social media, email marketing, and website content
+* Strong understanding of brand storytelling, marketing principles, and emerging content trends
+* Ability to manage marketing budgets and resources to maximize campaign ROI
+* Strong analytical skills and data\\-driven approach for content performance evaluation
+* Experience with analytics tools such as GA4, Tableau, OTA extranet dashboards, and media agency reports
+* Familiarity with hotel distribution systems (CRS, PMS, connected partners) and hospitality sales platforms (Opera, Delphi) is an advantage
+* Proven ability to build relationships and drive new business through networking, site inspections, and sales calls
+* Experience collaborating with external vendors, agencies, and media partners
+* A strong network with luxury travel and lifestyle publications (e.g., Forbes, Condé Nast Traveler, Travel \\+ Leisure, Michelin Guide) is a plus
+* Excellent written and verbal communication skills with strong storytelling abilities
+* Collaborative and team\\-oriented approach, supporting overall hotel goals
+* Ability to translate data insights into actionable content strategies
+* Strong project management, organizational, and time\\-management skills
+* Ability to manage multiple projects simultaneously with attention to detail
+* Responsible, reliable, results\\-oriented, and flexible in a dynamic environment
+* Professional demeanor: calm, courteous, and solution\\-focused under pressure
+* Proficient in Microsoft Office Suite
+
+**Physical Requirements**
+
+* Ability to stand and walk for extended periods
+* Capacity to lift and carry up to 30 lbs
+* Frequent bending, kneeling, pushing, pulling, and stair use
+
+  
+
+**Additional Information** **Visa Requirements:**  
+
+Must be legally eligible to work in Canada. The hotel is unable to assist candidates in obtaining Canadian work authorization.
+
+**Our commitment to Diversity \\& Inclusion:**  
+
+We are an inclusive company and our ambition is to attract, recruit and promote diverse talent.  
+
+  
+
+**Why work for Accor?**  
+
+We are far more than a worldwide leader. We welcome you as you are and you can find a job and brand that matches your personality. We support you to grow and learn every day, making sure that work brings purpose to your life, so that during your journey with us, you can continue to explore Accor’s limitless possibilities.  
+
+By joining Accor, every chapter of your story is yours to write and together we can imagine tomorrow's hospitality. Discover the life that awaits you at Accor, visit https://careers.accor.com
+
+
+Do what you love, care for the world, dare to challenge the status quo! **\\#BELIMITLESS**","Restaurants Travel And Leisure","https://ca.indeed.com/cmp/Fairmont-693816e0","https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/256x256/1aae43bea279c7b768bc72a61b0574d4","https://www.fairmont.com","New York, USA | Dubai, UAE | Paris, France","10,000+","$1B to $5B (USD)","Established in 1907, Fairmont Hotels & Resorts is a globally recognized brand renowned for its timeless elegance and commitment to exceptional hospitality.","","","","","","","SEO Specialist","indeed"
+"in-5499a792acc17571","indeed","https://ca.indeed.com/viewjob?jk=5499a792acc17571","http://ca.indeed.com/job/seo-digital-marketing-specialist-5499a792acc17571","SEO & Digital Marketing Specialist","","Burlington, ON, CA","2026-03-14","fulltime","","","","","",False,"","","","","**Job Title:** SEO \\& Digital Marketing Specialist  
+**Location:** Burlington, ON (Full\\-Time)
+
+A growing niche marketing agency based in Burlington, Ontario is looking for a **mid\\-level SEO \\& Digital Marketing Specialist** to join our team. We work with a specialized client base across Canada and are focused on delivering measurable growth through strategic digital marketing.
+
+This role is ideal for someone who enjoys both **strategy and execution**—from creating SEO\\-driven content to managing paid advertising campaigns and supporting client marketing initiatives.
+
+**About the Role**
+
+The SEO \\& Digital Marketing Specialist will play an important role in the execution and management of our client marketing projects. You will be responsible for creating optimized content, managing paid ad campaigns, and ensuring that client marketing initiatives are running effectively.
+
+You will report directly to the **Marketing Director** and work closely with our team to deliver strong results for our clients.
+
+Key Responsibilities
+
+* Create and optimize **SEO\\-focused website content** and blog articles
+* Conduct **keyword research and on\\-page SEO optimization**
+* Manage and optimize **Google Ads and Meta (Facebook/Instagram) paid advertising campaigns**
+* Monitor campaign performance and adjust strategies to improve ROI
+* Oversee and help coordinate digital marketing projects for assigned client accounts
+* Track and report on marketing performance metrics and campaign results
+* Collaborate with internal team members on content strategy and campaign planning
+* Stay current with SEO and digital advertising best practices
+
+Qualifications
+
+* 2–4 years of experience in **SEO and digital marketing**
+* Experience managing **Google Ads and Meta Ads campaigns**
+* Strong understanding of **SEO fundamentals and content optimization**
+* Familiarity with **analytics and performance tracking tools** (Google Analytics, Search Console, etc.)
+* Excellent written communication skills for creating web content
+* Strong organizational and project management abilities
+* Ability to manage multiple client projects and deadlines
+
+What We Offer
+
+* **Full\\-time position (Monday – Friday, 9:00 AM – 5:00 PM)**
+* **Starting salary: $45,000 – $55,000** depending on experience
+* **Two weeks paid vacation**
+* Opportunity to work with a specialized client base across Canada
+* Collaborative and supportive team environment
+* Growth opportunities within a growing marketing agency
+
+Location
+
+This position is based in **Burlington, Ontario**.
+
+If you are passionate about **SEO, digital advertising, and delivering measurable results for clients**, we would love to hear from you.
+
+**Apply by sending your resume and a brief introduction about your experience in SEO and paid advertising.**
+
+Pay: $48,000\\.00\\-$55,000\\.00 per year
+
+Work Location: In person","","https://ca.indeed.comNone","","","","","","","","","","","","","SEO Specialist","indeed"
+"in-fdc76487fe620344","indeed","https://ca.indeed.com/viewjob?jk=fdc76487fe620344","https://www.jobbank.gc.ca/jobsearch/jobposting/49102739","digital marketing specialist","Aek Tek Overseas Ltd.","Brampton, ON, CA","2026-03-13","parttime, fulltime","","","","","",False,"","","","","* Education: Secondary (high) school graduation certificate
+* Experience: 1 to less than 7 months
+* **Work setting**
+----------------
+* Business and/or industry
+* **Tasks**
+---------
+* Develop all kinds of events for publicity, fundraising and information purposes
+* Develop communication strategies
+* Develop policies
+* Prepare written material such as reports, briefs, website content
+* Produce educational and publicity programs and informational materials to awaken curiosity and interest in the subject matter
+* Supervise staff
+* Administer programs to promote industrial and commercial business investment in rural and urban areas
+* Perform administrative tasks
+* Conduct comparative research on marketing strategies for industrial and commercial products
+* Answer written and oral inquiries
+* Assist in the preparation of brochures, reports, newsletters and other material
+* Develop promotional materials
+* **Computer and technology knowledge**
+-------------------------------------
+* Search Engine Optimization (SEO)
+* **Area of specialization**
+--------------------------
+* Brand management
+* Digital media
+* **Work conditions and physical capabilities**
+---------------------------------------------
+* Work under pressure
+* Attention to detail
+* **Personal suitability**
+------------------------
+* Client focus
+* Excellent written communication
+* Initiative
+* Organized
+* Reliability
+* **Employment terms options**
+----------------------------
+* Evening
+* Morning
+* Day
+* Work Term: Permanent
+* Work Language: English
+* Hours: 30 hours per week","","https://ca.indeed.com/cmp/Aek-Tek-Overseas-Ltd.","","","","","","","","","","","","","SEO Specialist","indeed"
+"in-f97d62f3b8bf2f78","indeed","https://ca.indeed.com/viewjob?jk=f97d62f3b8bf2f78","https://myjobs.greatersudbury.ca/psp/MYJOBS/EMPLOYEE/HRMS/c/HRS_HRAM_FL.HRS_CG_SEARCH_FL.GBL?Page=HRS_APP_JBPST_FL&Action=U&FOCUS=Applicant&SiteId=2&JobOpeningId=3626&PostingSeq=1","Marketing Specialist - Bilingual - English/French","Greater Sudbury","Greater Sudbury, ON, CA","2026-03-13","","","","","","",True,"","","","myJOBS@greatersudbury.ca","**Job Description**
+-------------------
+
+  
+
+
+**Section:** Libraries and Heritage Resources  
+
+**Division:** Greater Sudbury Public Library  
+
+**Department:** Office of the Chief Administrative Officer  
+
+**Initial Reporting Location:** Main Public Library
+
+**Job Status:** Permanent Position \\- Bilingual \\- English/French  
+
+  
+
+**Union Affiliation:** CUPE 4705 Inside Unit  
+
+**Hours of Work:** 70 hours bi\\-weekly  
+
+**Shift Work Required:** No  
+
+**Range of Pay:** Group 11 \\- $32\\.74 to $40\\.69 per hour (Subject to Review) \\- Range in effect April 1, 2026
+
+**The start date will follow the selection process.**
+
+
+This position is eligible to work remotely on a part\\-time basis (Note: Must be able to report to a City of Greater Sudbury work location on short notice).
+
+**Main Function:** Reporting to the Manager of Libraries and Heritage Resources, this position is responsible for developing, implementing, and evaluating marketing strategies that align with the Greater Sudbury Public Library (GSPL) strategic goals by creating content, managing branding, coordinating outreach and promotional events, and leveraging both traditional and digital media to enhance visibility and engagement with internal and external audiences.
+
+**Duties:**  
+
+1\\. Develop and execute marketing campaigns to promote library programs, services, and events.  
+
+2\\. Design promotional materials such as posters, flyers, brochures, and digital graphics, taking photos and videos at library events for use in said promotional materials.  
+
+3\\. Manage and grow the library’s presence on social media platforms.  
+
+4\\. Create engaging multimedia content for website, digital media, marketing campaigns, press releases, newsletters, promotional items, brochures, presentations, and new media.  
+
+5\\. Maintain and update the library’s website with current events, news, and resources.  
+
+6\\. Monitor and analyze digital engagement metrics (e.g., website traffic, social media reach) and optimize content for search engines (SEO) to improve online visibility.  
+
+7\\. Coordinate outreach and promotional opportunities within the community and develop partnerships with community groups to enhance visibility  
+
+8\\. Prepare and deliver presentations. Represent the library at community events and other promotional or public relations functions.  
+
+9\\. Develop templates and guidelines for staff to use in promotional efforts, ensuring consistent use of the library’s branding across all platforms and materials.  
+
+10\\. Track and report on the effectiveness of marketing initiatives and utilize data to refine strategies and improve outreach efforts.  
+
+11\\. Contribute to the development of the library’s marketing strategy and annual communications plan, keeping up to date on trends in library marketing and public engagement.  
+
+12\\. Participate in library and external committees and/or working groups to achieve the goals of the library.  
+
+13\\. Develop and maintain a thorough working knowledge of CGS’s Safety Manual and the applicable provincial legislation listed therein.  
+
+14\\. Perform other related duties as required.
+
+**Qualifications**
+
+* College diploma in a related discipline (e.g., marketing or advertising) from a recognized community college with Canadian accreditation.
+* Additional qualifications in website design, desktop publishing and the productions of traditional print material considered an asset.
+* Over two and one half (2½) years up to and including five (5\\) years of directly related experience.
+* Knowledge of best practices within areas of responsibility.
+* Knowledge of library services and operations, including the value and importance of public libraries.
+* Knowledge of current marketing and communications trends.
+* Knowledge of current and emerging social media platforms.
+* Knowledge of computer related applications for desktop and web publishing.
+* Knowledge of typography, layout, graphic design, and art direction principles.
+* Knowledge of Search Engine Optimization an asset.
+* Knowledge of graphic design considered an asset.
+* Ability to demonstrate proficiency with content management systems.
+* Ability to demonstrate strong organizational and analytical skills.
+* Ability to demonstrate strong presentation skills.
+* Ability to demonstrate strong interpersonal and communication skills.
+* Excellent use of English; verbally and in writing.
+* Excellent use of French; verbally and in writing.
+* Satisfactory health, attendance, and former employment history.
+* May require the use of a personal or CGS vehicle on CGS business. Must be physically capable of operating a vehicle safely, possess a valid driver’s licence, have an acceptable driving record, and personal insurance coverage.
+
+**Competencies:** (click to view)  
+
+Competency Library \\- Level 1 Proficiency
+
+
+This job is also being posted as a development opportunity. Should there be no fully qualified candidate for this position, a candidate who can be expected to meet the required qualifications within a reasonable period of time may be considered for this position as a development opportunity.
+
+
+Development opportunity range of pay: $31\\.35 to $37\\.85 per hour (Subject to Review) Range in effect April 1, 2026\\. The successful candidate will be paid at the reduced range until the minimum qualifications have been met.
+
+
+**How To Apply**
+----------------
+
+  
+
+
+If you are viewing this job posting through a website other than the City of Greater Sudbury's, please visit www.greatersudbury.ca/jobs to apply online.
+
+
+We must receive your resume **before 11:59 p.m. on Friday, March 27, 2026**. For those providing a French language resume, please also include an English version.
+
+  
+
+* 
+* Follow the step by step application process.
+* Ensure you attached a cover letter and resume. Acceptable file types are:
+	+ .doc
+	+ .docx
+	+ .txt
+	+ .pdf
+	+ .rtf
+* 
+* Upon submission of your application, you will get a confirmation on the screen that your application has been successfully submitted. You will also receive an e\\-mail confirmation to the e\\-mail address on your profile.
+
+
+All applicants are thanked for their interest in this position. Only those selected for an interview will be contacted. If contacted, and you require a disability related accommodation in order to participate in the recruitment process you must advise the Hiring Manager.
+
+**Live outside Canada or new to Canada?**  
+
+The City of Greater Sudbury is dedicated to maintaining a fair, inclusive, and equitable work environment and our City welcomes qualified applicants from anywhere. To learn more about working in Canada, visit this webpage: Applicants Living Outside of Canada (greatersudbury.ca)
+
+**Contact Us:**  
+
+For technical difficulties, issues, questions or accommodations with an application made online email myJOBS@greatersudbury.ca","","https://ca.indeed.com/cmp/Greater-Sudbury","https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/256x256/e2183bb6fd6347af5720f37ce902074b","https://www.greatersudbury.ca/","200 Brady St., Sudbury, ON P3A 5P3 Canada","1,001 to 5,000","","The City of Greater Sudbury is one of the largest employers in the city. Our employees play a key role in providing essential services to residents across the community.","","","","","","","SEO Specialist","indeed"
+"in-ad9919ff21392d9b","indeed","https://ca.indeed.com/viewjob?jk=ad9919ff21392d9b","https://jsv3.recruitics.com/redirect?rx_cid=3618&rx_jobId=R-0000163637&rx_url=https%3A%2F%2Fjobs.rbc.com%2Fca%2Fen%2Fjob%2FR-0000163637%3Frx_a%3D0%26rx_c%3D%26rx_ch%3Djobp4p%26rx_group%3D300081%26rx_id%3Dbf2d585c-1f0a-11f1-b6fc-89c7993450b8%26rx_job%3DR-0000163637%26rx_medium%3Dcpc%26rx_r%3Dnone%26rx_source%3Dindeed%26rx_ts%3D20260315T000531Z%26rx_vp%3Dcpc%26source%3DAPPLICANT_SOURCE_INDEEDORGANIC%26utm_medium%3Dcpc%26utm_source%3Dindeedorganic","Senior Marketing Manager - Houseful","RBC","Toronto, ON, CA","2026-03-13","fulltime","","","","","",False,"","","","","**Job Description**
+
+**About RBCx**
+
+
+RBCx pursues big, bold ideas and leverages RBC’s extensive experience, networks, and capital to help shape what’s next. Our four pillars – Banking, Capital, Platform, and Ventures – combine to support tech businesses of all sizes and stages, making us the go\\-to backer of Canadian innovation. RBCx banks, builds, and invests in the innovation ecosystem – backed by the institutional strength and stability of the Royal Bank of Canada (RBC). With specialized financial solutions, portfolio building experience, and a collective of specialists that provide powerful support, we help startups and scaleups unlock growth across every stage of their journey. Visit rbcx.com\\<http://rbcx.com\\> to learn more. Our people are our most valuable assets, so we invest deeply in ensuring RBCx isn’t just a place to work but a place to belong.
+
+
+Houseful is looking for a Senior Marketing Manager who is a master at collaboration, orchestration and, ultimately, execution. Someone who is comfortable working as an individual contributor to support the execution of a digital marketing strategy. Answering into the Head of Marketing for all of RBCx, this role is your opportunity to take the reins of our day\\-to\\-day marketing operations and drive our success in connecting with our consumers, building our business and helping first\\-time home buyers realize their dream of owning a home. You'll be the architect of our tactical marketing plans—from paid marketing campaigns to content planning and execution to partnership initiatives, you will be in the center of everything. You'll work across teams to bring plans to life, blending strategic thinking with hands\\-on execution.
+
+**What You'll Do**
+------------------
+
+**Marketing Execution**
+
+* Develop comprehensive tactical plans across paid digital marketing, content marketing, co\\-marketing with enterprise partners
+* Connect cross\\-functional teams (product, design, enterprise) to execute tactical marketing initiatives
+* Own the marketing calendar and ensure coordinated execution by all teams across all channels
+* Own all roadmaps and status documentation, ensuring all teams and stakeholders are updated on executional progress and results
+* Build all briefs to brief in cross\\-functional partners
+* Track and report on performance metrics, translating data into actionable insights
+* Build content plans and oversee content creation across formats like blogs and newsletters
+* Ensure content aligns with AEO/SEO best practices and drives both citation and organic growth
+
+**What You Bring**
+------------------
+
+### **Required Experience \\& Skills**
+
+* 6\\+ years of marketing experience
+* Expertise in digital marketing, including paid social, programmatic, video
+* Background inclusive of content marketing strategy and execution
+* Experience managing marketing budgets and allocating resources effectively
+* Data\\-driven mindset with proficiency in analytics tools (Google Analytics, marketing automation platforms, attribution tools)
+* Excellent project management skills and ability to juggle multiple priorities and get different teams to work together toward common goals
+* Strong communication and presentation abilities
+* Experience working in fast\\-paced, agile environments where priorities can shift quickly
+
+### **Nice to Have**
+
+* Background in B2B tech or SaaS marketing
+* Experience building marketing functions from scratch or in early\\-stage companies
+* Knowledge of marketing automation platforms (HubSpot, SalesForce)
+* Understanding of product marketing principles
+* SEO and conversion rate optimization expertise
+
+**What’s In It For You**
+
+
+We thrive on the challenge to be our best, progressive thinking to keep growing, and working
+
+
+together to drive the growth of our businesses and our people. We care about each other, reaching our potential, making a difference to our communities, and achieving
+
+
+success that is mutual.
+
+* Be part of a mission\\-driven organization that is shaping the financial future of the next generation
+* Work with a passionate and innovative team within the supportive environment of RBC
+* Opportunity to play a pivotal role in shaping our brand’s story and driving meaningful connections with our audience
+* A comprehensive Total Rewards Program including bonuses and flexible benefits,
+* competitive compensation, commissions, and stock where applicable
+* Leaders who support your development through coaching and managing opportunities
+* Ability to make a difference and lasting impact
+* Work in a dynamic, collaborative, progressive, and high\\-performing team
+
+**Job Skills**
+
+
+Brand Marketing, Communication, Creativity, Cross Promotions, Customer Behavior, Industry Knowledge, Long Term Planning, Marketing, Marketing Activities, Product Services**Additional Job Details**
+
+**Address:**
+
+
+20 KING ST W:TORONTO**City:**
+
+
+Toronto**Country:**
+
+
+Canada**Work hours/week:**
+
+
+37\\.5**Employment Type:**
+
+
+Full time**Platform:**
+
+
+PERSONAL \\& COMMERCIAL BANKING**Job Type:**
+
+
+Regular**Pay Type:**
+
+
+Salaried**Posted Date:**
+
+
+2026\\-03\\-12**Application Deadline:**
+
+
+2026\\-03\\-28**Note****:** *Applications will be accepted until 11:59 PM on the day prior to the application deadline date above*
+
+**Our Employment Opportunities**
+
+
+At RBC, we are guided by living shared values of Client First, Integrity, Collaboration, Respect and Excellence and winning together as One RBC. We believe an inclusive workplace that has diverse perspectives is core to our continued growth as one of the largest and most successful banks in the world. Maintaining a workplace where our employees feel supported to perform at their best, effectively collaborate, drive innovation, and grow professionally helps to bring our Purpose to life and create value for our clients and communities. RBC strives to deliver this through policies and programs intended to foster a workplace based on respect, belonging and opportunity for all.
+
+**Join our Talent Community**  
+
+  
+
+Stay in\\-the\\-know about great career opportunities at RBC. Sign up and get customized info on our latest jobs, career tips and Recruitment events that matter to you.  
+
+  
+
+Expand your limits and create a new future together at RBC. Find out how we use our passion and drive to enhance the well\\-being of our clients and communities at jobs.rbc.com.
+
+
+RBC is presently inviting candidates to apply for this existing vacancy. Applying to this posting allows you to express your interest in this current career opportunity at RBC. Qualified applicants may be contacted to review their resume in more detail.","","https://ca.indeed.com/cmp/Rbc","https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/256x256/24b5226a07f0233c415dc4023ca92a38","http://www.rbc.com","Toronto, ON","10,000+","more than $10B (USD)","We're committed to helping clients thrive and communities prosper, supporting strategic initiatives that make a measurable impact on society.","","","","","","","SEO Specialist","indeed"
+"li-4373148041","linkedin","https://www.linkedin.com/jobs/view/4373148041","","Freelance marketing - SEO","Twine","","2026-03-13","","","","","","",False,"","","","","","","https://uk.linkedin.com/company/twine-net","","","","","","","","","","","","","SEO Specialist","linkedin"
+"li-4373035055","linkedin","https://www.linkedin.com/jobs/view/4373035055","","Digital Marketing Coordinator","BET99","","2026-03-13","","","","","","",False,"","","","","","","https://ca.linkedin.com/company/bet99","","","","","","","","","","","","","SEO Specialist","linkedin"
+"li-4385528390","linkedin","https://www.linkedin.com/jobs/view/4385528390","","AEO / SEO & Content Lead (Organic Growth) | Remote (UK or Canada)","Gatekeeper","","2026-03-13","","","","","","",True,"","","","","","","https://uk.linkedin.com/company/gatekeeperhq","","","","","","","","","","","","","SEO Specialist","linkedin"
+"li-4385540007","linkedin","https://www.linkedin.com/jobs/view/4385540007","","AEO / SEO & Content Lead (Organic Growth) | Remote (UK or Canada)","Gatekeeper","","2026-03-13","","","","","","",True,"","","","","","","https://uk.linkedin.com/company/gatekeeperhq","","","","","","","","","","","","","SEO Specialist","linkedin"
+"li-4383115961","linkedin","https://www.linkedin.com/jobs/view/4383115961","","Digital Marketing Specialist","Designed Wealth Management","Toronto, Ontario, Canada","2026-03-13","","","","","","",False,"","","","","","","https://ca.linkedin.com/company/designed-wealth-management","","","","","","","","","","","","","SEO Specialist","linkedin"
+"li-4367634464","linkedin","https://www.linkedin.com/jobs/view/4367634464","","SEO Specialist (Independent Contractor)","DataAnnotation","","","","","","","","",False,"","","","","","","https://www.linkedin.com/company/dataannotationtech","","","","","","","","","","","","","SEO Specialist","linkedin"
+"in-0568481b01f2248a","indeed","https://ca.indeed.com/viewjob?jk=0568481b01f2248a","https://hostpapa.applytojob.com/apply/LhyAQnySsZ/Senior-AIEnabled-FullStack-Developer?source=INDE&~","Senior AI-Enabled Full-Stack Developer","HostPapa","Remote, CA","2026-03-13","fulltime","","","","","",True,"","","","","**Position Summary:**
+
+
+With team members and customers in 39 countries around the globe, HostPapa is currently one of the fastest\\-growing web hosting companies with a wide range of products available. At its core, we provide individuals and small and medium\\-sized businesses with access to valuable tools and services critical to their online success, including a Website Builder service for making website creation an ultra\\-easy task for anyone. Tailored to meet every user's unique needs, our award\\-winning customer support, email, and cloud\\-based solutions keep HostPapa at the cutting edge of the web hosting industry and innovation by putting our customers first.
+
+
+As the **Senior AI\\-Enabled Full\\-Stack Developer**, you’ll be at the forefront of integrating AI into our product experience, using it to solve real\\-world problems at scale. We’re looking for developers who think critically about user needs, challenge assumptions, and build with both precision and purpose. You’ll work with tools like Next.js, TypeScript, shadcn/ui, Supabase, and an evolving AI toolchain to create intelligent, adaptive features that enhance our platform and deliver measurable value to customers.
+
+**What you’ll do:**
+
+* Influence product direction by challenging assumptions and advocating for user\\-first decisions
+* Design scalable architectures and break them into actionable components with clear rationale
+* Build full\\-stack apps using Next.js, TypeScript, shadcn/ui, Supabase/Postgres, and edge functions
+* Develop AI\\-driven workflows that accelerate development while ensuring correctness
+* Lead code reviews, mentor peers, and uphold high engineering standards
+* Monitor and optimize performance, security, and cost in production environments
+* Collaborate async with global teams across product, design, and operations
+* Support other tasks or projects as assigned to meet team and business needs
+
+**About you**
+
+* 7\\+ years of experience working on production web applications, including 3\\+ years with React and Next.js (v14\\+)
+* Strong expertise in TypeScript, modern React patterns, and API/system design
+* Solid experience working with Postgres and/or MySQL, along with CI/CD automation
+* Experience integrating and evaluating AI tools or LLM\\-based solutions within development workflows
+* Writes comprehensive tests, including unit, integration, and end\\-to\\-end tests
+* Passionate about using AI to streamline development and improve productivity
+* Strong communication skills, particularly in asynchronous collaboration environments
+* Data\\-driven and collaborative, with a precise and thoughtful approach to problem solving
+* Values correctness, clarity, and maintainability over speed
+* Curious about practical applications of AI in engineering, with a focus on real impact rather than hype
+
+**What we offer:**
+
+* Work from anywhere \\- this is a remote opportunity
+* A competitive salary that values you and your unique skill sets
+* Career advancement \\& professional development opportunities to help you reach your full potential
+* Flexible work arrangements to support work/life balance
+
+**About Us:**
+
+
+At HostPapa, we’ve been committed to providing a complete array of enterprise\\-grade cloud services solutions to every business owner since 2006\\. These services, traditionally out of reach to smaller businesses, are offered in a one\\-stop shop, making it quick and easy for customers to select the services they need to grow. We back these offerings with 24/7 award‑winning customer support in four languages.
+
+
+Our HostPapa team values diversity and inclusion. We have a friendly company culture built on trust and respect. With the acquisition of several companies into our product portfolio, we’re growing at an incredible rate and have ample opportunities for career growth.
+
+
+Come join our talented team of enthusiastic, hard\\-working, passionate, driven people engaged in meaningful, innovative work. We can’t wait to meet you!
+
+*HostPapa is an equal\\-opportunity employer committed to diversity and inclusion. As a multicultural organization, we encourage individual achievement and recognize the strength of our diverse team.*
+
+*HostPapa is committed to providing accommodations for people with disabilities. If you require accommodation, please let us know, and we will work with you to meet your needs. Accommodation may be provided in all parts of* *the hiring process.*
+
+*It is anticipated that this position will be performed outside of Ontario**.*
+
+
+
+
+LhyAQnySsZ","","https://ca.indeed.com/cmp/Hostpapa","https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/256x256/3fe09f3c6935565d2570160f7f711576","https://www.hostpapa.com","Oakville","11 to 50","$5B to $10B (USD)","HostPapa is a web technology company located in Burlington, Canada that specializes in website hosting and email services.","","","","","","","Senior Full Stack Developer (React, TypeScript, Node or PHP)","indeed"
+"in-5d5798274e3144be","indeed","https://ca.indeed.com/viewjob?jk=5d5798274e3144be","https://grnh.se/e82v8mtu1us","Staff Software Engineer (L4)","Twilio","Remote, CA","2026-03-13","","","","","","",True,"","","","","**Who we are**
+
+
+
+At Twilio, we're shaping the future of communications, all from the comfort of our homes. We deliver innovative solutions to hundreds of thousands of businesses and empower millions of developers worldwide to craft personalized customer experiences.
+
+
+
+Our dedication to remote\\-first work, and strong culture of connection and global inclusion means that no matter your location, you're part of a vibrant team with diverse experiences making a global impact each day. As we continue to revolutionize how the world interacts, we're acquiring new skills and experiences that make work feel truly rewarding. Your career at Twilio is in your hands.  
+
+  
+
+We use Artificial Intelligence (AI) to help make our hiring process efficient. That said, every hiring decision is made by real Twilions!
+
+
+
+.
+
+**See yourself at Twilio**
+
+
+
+Join the team as our next Staff Software Engineer in the Enterprise AI Engineering team.
+
+
+**About the job**
+
+
+
+Twilio is undergoing a major business transformation powered by Enterprise AI, supported by a dedicated engineering team building the foundations for a unified, secure, and scalable operating system across GTM functions (Sales, Support, Operations, etc.) as well as Internal non\\-GTM functions (Finance, HR, Legal, etc.) Our platform is designed to support a multitude of business functions by deploying intelligent agentic solutions that automate complex workflows and deliver unprecedented user experiences. We're building the future of work at Twilio, and this role offers the opportunity to be at the forefront of enterprise AI innovation. This role focuses specifically on transforming how Twilio's Customer Support organization operates through AI\\-powered tools and agentic products.
+
+
+
+We are looking for **Full\\-Stack Engineers** who view AI as a fundamental shift in the software development lifecycle of engineering products and the delivery of beautiful, engaging user experiences. This is an opportunity to deliver innovative software products and solutions across every business function in the company such as Sales, Marketing, GTM, HR, Finance and Legal.
+
+
+
+Joining this team means building **production grade, full\\-stack AI applications**. You won't just be wrapping APIs; you will be engineering the entire lifecycle of agentic applications.
+
+
+
+As a Staff Software Engineer within Enterprise AI, you are the technical heartbeat of our products. Your role is to bridge the gap between bleeding\\-edge AI research and robust, full\\-stack production systems.
+
+
+**Responsibilities**
+
+
+
+In this role, you'll:
+
+
+* Co\\-lead the design and development of our software infrastructure, driving technical vision and strategy to ensure scalability, reliability, and performance.
+* Drive the development of sophisticated, stateful web applications. You will oversee the integration of complex React\\-based front\\-ends with backend modular services, ensuring a seamless UI experience.
+* Serve as developer leader in distributed systems, data technologies, with strong software engineering skills.
+* Drive technical innovation and research to stay at the forefront of emerging data technologies and best practices.
+* Mentor and elevate a team of high\\-performing engineers. You don't just write great code; you foster a culture of technical excellence, helping senior and mid\\-level engineers level up through deep\\-dive code reviews and architectural workshops.
+* Collaborate closely with cross\\-functional teams to understand business requirements and translate them into scalable and efficient technical solutions.
+* Continuously adapt to the evolving JavaScript ecosystem to maximize engineering efficiency.
+* Ensure data quality, integrity, and security throughout the data lifecycle, adhering to industry best practices and compliance standards.
+
+
+**Qualifications**
+
+
+
+Twilio values diverse experiences from all kinds of industries, and we encourage everyone who meets the required qualifications to apply. If your career is just starting or hasn't followed a traditional path, don't let that stop you from considering Twilio. We are always looking for people who will bring something new to the table!
+
+
+* **Required:**
+
+
+* Bachelor's degree in Computer Science, Engineering, or a related field.
+* 8\\+ years of experience in data engineering, software development, or a related field, with at least 3 years in a technical leadership role.
+* Experience with full\\-stack development building web apps, using modern programming languages such as JavaScript, Typescript or React.
+* Proven track record of architecting and delivering complex data projects at scale, with a deep understanding of data infrastructure and distributed systems.
+* Strong understanding of data modeling, data warehousing, and ETL processes, with experience designing and optimizing data pipelines.
+* Excellent communication and collaboration skills, with the ability to influence technical decisions and drive alignment across teams.
+* Strong leadership skills, with a track record of mentoring and developing high\\-performing engineering teams.
+* Demonstrated ability to thrive in a fast\\-paced, dynamic environment and deliver results under tight timelines.
+
+
+**Desired:**
+
+
+* Experience developing production\\-quality LLM applications and using modern agent frameworks such as Langchain, Langgraph, Llamaindex, LangSmith, LangFuse, CrewAI, and/or others is a plus.
+* Expertise in big data technologies such as Hadoop, Spark, Kafka, and cloud\\-based data services (AWS/GCP/Azure).
+
+
+**Location**
+
+
+
+This role will be remote, and based in Canada.
+
+
+**Travel**
+
+
+
+We prioritize connection and opportunities to build relationships with our customers and each other. For this role, you may be required to travel occasionally to participate in project or team in\\-person meetings.
+
+
+**What We Offer**
+
+
+
+Working at Twilio offers many benefits, including competitive pay, generous time off, ample parental and wellness leave, healthcare, a retirement savings program, and much more. Offerings vary by location. Based on role, employees may also be eligible for additional compensation and benefits, including but not limited to incentive programs, commissions, equity grants, health and wellness benefits, retirement contributions, and paid time off.
+
+
+
+The estimated pay ranges for this role are as follows:
+
+
+* $160,320 \\- $200,400
+* Target Bonus Percentage 15% (When Applicable)
+
+
+The successful candidate's starting salary will be determined based on permissible, non\\-discriminatory factors such as skills, experience, and geographic location.
+
+**Twilio thinks big. Do you?**
+
+
+
+We like to solve problems, take initiative, pitch in when needed, and are always up for trying new things. That's why we seek out colleagues who embody our values — something we call Twilio Magic. Additionally, we empower employees to build positive change in their communities by supporting their volunteering and donation efforts.
+
+
+
+So, if you're ready to unleash your full potential, do your best work, and be the best version of yourself, apply now! If this role isn't what you're looking for, please consider other open positions.
+
+
+**Twilio is proud to be an equal opportunity employer.** We do not discriminate based upon race, religion, color, national origin, sex (including pregnancy, childbirth, reproductive health decisions, or related medical conditions), sexual orientation, gender identity, gender expression, age, status as a protected veteran, status as an individual with a disability, genetic information, political views or activity, or other applicable legally protected characteristics. We also consider qualified applicants with criminal histories, consistent with applicable federal, state and local law. Qualified applicants with arrest or conviction records will be considered for employment in accordance with the Los Angeles County Fair Chance Ordinance for Employers and the California Fair Chance Act. Additionally, Twilio participates in the E\\-Verify program in certain locations, as required by law.","Internet And Software","https://ca.indeed.com/cmp/Twilio","https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/256x256/308e9e339069dfe1233303345fd6514f","http://www.twilio.com","101 Spear Street 5th floor, San Francisco, CA, 94105","5,001 to 10,000","$1B to $5B (USD)","Twilio’s mission is to unlock the imagination of builders.","","","","","","","Senior Full Stack Developer (React, TypeScript, Node or PHP)","indeed"
+"in-4d0fabdf8cdb72e2","indeed","https://ca.indeed.com/viewjob?jk=4d0fabdf8cdb72e2","https://medaviehs.wd10.myworkdayjobs.com/en-US/Medavie_External/job/New-Brunswick/Senior-Full-Stack-Developer--Identity-Management-Security-_R-267282","Senior Full Stack Developer (Identity Management Security)","Medavie","NB, CA","2026-03-13","fulltime","","","","","",True,"","","","Medavie.Recruitment@medavie.ca","Position Type:
+Permanent
+If you’re looking for a fulfilling career that can make a real difference in your life, and the lives of others, you’ve come to the right place.
+As a national health solutions partner, we put people first in everything we do — and that begins with our team of 8,000\\+ professionals who bring a cross\\-section of diverse life experiences and career expertise to Medavie. By collaborating and innovating together, our employees are creating industry\\-leading solutions in insurance, primary care and emergency medical services that impact millions of lives in Canada each year.
+Our mission is to improve the wellbeing of Canadians so that every life can be lived to the fullest — and it’s reflected in our award\\-winning culture. We celebrate individuality and value the diverse perspectives and skills our employees contribute. We go beyond providing competitive pay and comprehensive benefits to offer opportunities for personal and professional growth, flexible work options, meaningful experiences, and supportive leadership. Medavie is where employees can be their best selves, feel they belong, and achieve their full potential. Be part of it by applying for a position with us today.
+About the Role
+We are seeking a highly motivated and dynamic professional Senior Full Stack Developer. You will lead end\\-to\\-end delivery of Web Applications built with Vue.js, Express.js and Java. You will design, implement and deploy using GitLab (source control \\& CI/CD), with Python used to automate deployment tasks. This position combines hands\\-on development, architectural decision\\-making, and leadership.
+Key Responsibilities:
+Software Development:* Build Single Page Applications using Vue.js and modern JavaScript frameworks.
+* Develop secure backend services using Express.js.
+* Create and maintain REST APIs and microservices architectures.
+* Write unit, integration, and functional tests; participate in code reviews.
+* Interpret requirements and deliver well\\-documented, maintainable solutions.
+
+
+Architecture \\& Design:* Produce technical design documents, diagrams, and tradeoff analyses.
+* Present technical solutions to both technical and non\\-technical stakeholders.
+* Lead design reviews, demos, and post\\-incident analysis discussions.
+
+
+DevOps \\& Deployment:* Own and maintain GitLab CI/CD pipelines.
+* Automate deployment and operational tasks using scripting (Python, Bash).
+* Containerize and deploy services using Docker, Kubernetes, and/or Docker Swarm.
+* Support and troubleshoot applications running on Linux infrastructure.
+* Improve observability, logging, and reliability across systems.
+
+
+Leadership \\& Collaboration* Mentor junior developers and support team\\-wide best practices.
+* Collaborate with product, infrastructure, and security teams.
+* Translate business requirements into secure, scalable, and maintainable solutions.
+
+
+Identity \\& Security:* Apply IAM concepts in application design and implementation.
+* Implement secure coding practices following OWASP guidance.
+* Ensure proper secrets management and hardening of applications.
+
+
+Required Qualifications:
+Experience: 10\\+ years of professional full\\-stack or product development experience.
+Education: Degree in Computer Science or related field (or equivalent experience).
+Other Qualifications:
+1\\. Experience mentoring developers or leading teams.
+2\\. Strong experience with:* Java, JavaScript, Typescript
+* Vue.js or similar SPA frameworks (React, Angular)
+* Express.js
+* SQL and relational databases (e.g., Oracle)
+* REST API development
+* Microservice architectures
+* Git/GitLab, version control workflows, scripting automation
+* Docker \\& Kubernetes
+* Linux operating systems
+* Server\\-side Web Frameworks, such as JSF
+* Scripting languages, such as Bash or Python
+
+
+3\\. Excellent written and verbal communication skills.
+4\\. Strong analytical, debugging, and problem\\-solving abilities.
+5\\. Containers \\& orchestration knowledge.
+6\\. Ability to work independently and manage multiple priorities.
+7\\. Willingness to collaborate with others.
+8\\. Ability to develop and maintain positive working relationships.
+9\\. A problem\\-solving mindset and ability to translate business requirements into secure and scalable code
+10\\. A love for project\\-based work and staying on top of your technical game
+11\\. Open\\-minded and willing to adapt to existing development standards and structure
+Nice to Have:* Experience with Identity \\& Access Management (IAM) tools or concepts.
+* Secure coding practices and OWASP knowledge.
+* Quality control and operational excellence experience.
+* Experience with cloud.
+
+
+Security Clearance Requirement: In conjunction with our contract with the Federal Government, you will be required to have Reliability Status Clearance (Enhanced Level B). This includes Fingerprinting, Criminal Record Check, Credit Check and you must have resided in Canada for at least 5 years and hold Permanent Resident or Citizenship Status.
+What’s in it for you?
+What makes us a different kind of employer? Our award\\-winning culture, a team who really cares, unmatched training and support are all dedicated to ensuring you are set up for success.
+What we offer:* Permanent full\\-time position with strong career growth opportunities.
+* Hybrid or remote work arrangements.
+* Flexible work environment and work\\-life balance.
+* 100% employer\\-paid health, dental, and vision benefits (effective Day 1\\).
+* 100% employer\\-matched Defined Contribution Pension Plan.
+* Annual performance\\-based Incentive Bonus.
+* A gifted week of vacation in your first year \\+ optional Vacation Purchase Program.
+* Support for professional development, training, and certifications.
+* Wellness programs, health resources, and fitness discounts.
+
+
+Pay Range:
+$73,465 \\- $91,831
+\\#CBM2
+\\#LI\\-VS1
+This posting is for a newly created position within our organization.
+The Base Pay range may vary depending on the successful candidate or other relevant job\\-related factors such as knowledge, skills, qualifications, experience and education/training. In addition to Base Pay, eligible Medavie employees may participate in various performance\\-based incentive programs. Payments under these programs are discretionary and subject to both individual and organizational results.
+We believe our employees should reflect the communities we serve and welcome applications from candidates of all backgrounds. To provide the best experience possible, we will support you with accommodations or adjustments at any stage of the recruitment process. Simply inform our Recruitment team of your needs. We are committed to making sure recruitment, retention, advancement, and compensation are fair and accessible while following all relevant human rights and privacy laws*.* We appreciate everyone who has shown interest in this position. Only those selected for an interview will be contacted.
+Our recruitment process may involve automated tools, including AI, to assist in screening applications.
+If you experience any technical issues throughout the application process, please email: Medavie.Recruitment@medavie.ca.","","https://ca.indeed.com/cmp/Medavie-2","https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/256x256/4ac738a26a27302596c8dd3f206ed362","https://www.medavie.ca","Moncton, NB","5,001 to 10,000","$1M to $5M (USD)","Medavie is a national health solutions partner and innovative leader in benefits management, health management, primary care and healthcare delivery.","","","","","","","Senior Full Stack Developer (React, TypeScript, Node or PHP)","indeed"
+"in-463dbfa6eccf15de","indeed","https://ca.indeed.com/viewjob?jk=463dbfa6eccf15de","https://medaviehs.wd10.myworkdayjobs.com/fr-CA/Medavie_External/job/Nouveau-Brunswick/Senior-Full-Stack-Developer--Identity-Management-Security-_R-267282","Programmeur(euse) analyste principal(e)","Medavie","NB, CA","2026-03-13","fulltime","","","","","",True,"","","","Medavie.Recruitment@medavie.ca","Type de poste:
+Permanent
+À la recherche d’une carrière épanouissante qui changera réellement votre vie et celle des autres? Vous êtes au bon endroit.
+À titre de partenaire national en solutions de santé, nous plaçons les gens au cœur de tout ce que nous faisons – en commençant par notre équipe de plus de 8 000 employés et employées qui mettent à profit leurs expériences personnelles et professionnelles diversifiées dans le cadre de leur travail à Medavie. Par l’entremise de la collaboration et de l’innovation, notre équipe crée des solutions d’assurance, de soins primaires et de services médicaux d’urgence à l’avant\\-garde de l’industrie qui viennent en aide à des millions de Canadiens et Canadiennes chaque année.
+Notre mission est d’améliorer le bien\\-être de la population canadienne afin que chaque personne puisse profiter pleinement de la vie, et cela se reflète dans notre culture d’entreprise primée. Nous célébrons l’individualité des membres de notre personnel et accordons de la valeur à la diversité de leurs points de vue et de leurs compétences. C’est pourquoi en plus de vous offrir une rémunération concurrentielle et une gamme complète d’avantages sociaux, nous vous donnons accès à des possibilités de croissance professionnelle et personnelle, à des modalités de travail flexibles, à des expériences enrichissantes, ainsi qu’à un leadership bienveillant. À Medavie, chaque personne peut donner le meilleur d’elle\\-même, se sentir à sa place et atteindre son plein potentiel. Joignez\\-vous à nous en postulant un poste dès aujourd’hui.
+About the Role
+We are seeking a highly motivated and dynamic professional Senior Full Stack Developer. You will lead end\\-to\\-end delivery of Web Applications built with Vue.js, Express.js and Java. You will design, implement and deploy using GitLab (source control \\& CI/CD), with Python used to automate deployment tasks. This position combines hands\\-on development, architectural decision\\-making, and leadership.
+Key Responsibilities:
+Software Development:* Build Single Page Applications using Vue.js and modern JavaScript frameworks.
+* Develop secure backend services using Express.js.
+* Create and maintain REST APIs and microservices architectures.
+* Write unit, integration, and functional tests; participate in code reviews.
+* Interpret requirements and deliver well\\-documented, maintainable solutions.
+
+
+Architecture \\& Design:* Produce technical design documents, diagrams, and tradeoff analyses.
+* Present technical solutions to both technical and non\\-technical stakeholders.
+* Lead design reviews, demos, and post\\-incident analysis discussions.
+
+
+DevOps \\& Deployment:* Own and maintain GitLab CI/CD pipelines.
+* Automate deployment and operational tasks using scripting (Python, Bash).
+* Containerize and deploy services using Docker, Kubernetes, and/or Docker Swarm.
+* Support and troubleshoot applications running on Linux infrastructure.
+* Improve observability, logging, and reliability across systems.
+
+
+Leadership \\& Collaboration* Mentor junior developers and support team\\-wide best practices.
+* Collaborate with product, infrastructure, and security teams.
+* Translate business requirements into secure, scalable, and maintainable solutions.
+
+
+Identity \\& Security:* Apply IAM concepts in application design and implementation.
+* Implement secure coding practices following OWASP guidance.
+* Ensure proper secrets management and hardening of applications.
+
+
+Required Qualifications:
+Experience: 10\\+ years of professional full\\-stack or product development experience.
+Education: Degree in Computer Science or related field (or equivalent experience).
+Other Qualifications:
+1\\. Experience mentoring developers or leading teams.
+2\\. Strong experience with:* Java, JavaScript, Typescript
+* Vue.js or similar SPA frameworks (React, Angular)
+* Express.js
+* SQL and relational databases (e.g., Oracle)
+* REST API development
+* Microservice architectures
+* Git/GitLab, version control workflows, scripting automation
+* Docker \\& Kubernetes
+* Linux operating systems
+* Server\\-side Web Frameworks, such as JSF
+* Scripting languages, such as Bash or Python
+
+
+3\\. Excellent written and verbal communication skills.
+4\\. Strong analytical, debugging, and problem\\-solving abilities.
+5\\. Containers \\& orchestration knowledge.
+6\\. Ability to work independently and manage multiple priorities.
+7\\. Willingness to collaborate with others.
+8\\. Ability to develop and maintain positive working relationships.
+9\\. A problem\\-solving mindset and ability to translate business requirements into secure and scalable code
+10\\. A love for project\\-based work and staying on top of your technical game
+11\\. Open\\-minded and willing to adapt to existing development standards and structure
+Nice to Have:* Experience with Identity \\& Access Management (IAM) tools or concepts.
+* Secure coding practices and OWASP knowledge.
+* Quality control and operational excellence experience.
+* Experience with cloud.
+
+
+Security Clearance Requirement: In conjunction with our contract with the Federal Government, you will be required to have Reliability Status Clearance (Enhanced Level B). This includes Fingerprinting, Criminal Record Check, Credit Check and you must have resided in Canada for at least 5 years and hold Permanent Resident or Citizenship Status.
+What’s in it for you?
+What makes us a different kind of employer? Our award\\-winning culture, a team who really cares, unmatched training and support are all dedicated to ensuring you are set up for success.
+What we offer:* Permanent full\\-time position with strong career growth opportunities.
+* Hybrid or remote work arrangements.
+* Flexible work environment and work\\-life balance.
+* 100% employer\\-paid health, dental, and vision benefits (effective Day 1\\).
+* 100% employer\\-matched Defined Contribution Pension Plan.
+* Annual performance\\-based Incentive Bonus.
+* A gifted week of vacation in your first year \\+ optional Vacation Purchase Program.
+* Support for professional development, training, and certifications.
+* Wellness programs, health resources, and fitness discounts.
+
+
+Pay Range:
+$73,465 \\- $91,831
+\\#CBM2
+\\#LI\\-VS1
+This posting is for a newly created position within our organization.
+L’échelle salariale de base proposée peut dépendre du dossier de candidature de la personne retenue ou d’autres facteurs professionnels comme les connaissances, les compétences, la qualification, l’expérience et la formation. En plus de recevoir le salaire de base, les employés et employées admissibles de Medavie peuvent participer à divers programmes de bonification fondés sur le rendement. Le versement des paiements associés à ces programmes est discrétionnaire et dépend des résultats individuels et de ceux de l’entreprise.
+Nous croyons que les membres de notre personnel doivent représenter les collectivités que nous servons et nous encourageons les personnes de tous les horizons à poser leur candidature. Pour vous offrir la meilleure expérience qui soit, nous vous proposons des mesures d’adaptation pour chacune des étapes du processus de recrutement. Il vous suffit d’en faire la demande à l’équipe de recrutement. Nous nous engageons à veiller à ce que le recrutement, la fidélisation et le perfectionnement des employés et employées, de même que leur rémunération, demeurent équitables, tiennent compte des besoins en matière d’accessibilité et respectent l’ensemble des droits de la personne et des lois sur la protection de la vie privée qui s’appliquent. Nous remercions toutes les personnes qui ont manifesté de l’intérêt pour ce poste. Veuillez noter que nous communiquerons seulement avec les personnes retenues pour une entrevue.
+Des outils fondés sur l’intelligence artificielle sont utilisés dans le cadre de notre processus d’embauche afin d’appuyer l’évaluation des candidatures.
+Si vous rencontrez des problèmes techniques au cours de votre procédure d'application, veuillez envoyer un courriel à : Medavie.Recruitment@medavie.ca.","","https://ca.indeed.com/cmp/Medavie-2","https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/256x256/4ac738a26a27302596c8dd3f206ed362","https://www.medavie.ca","Moncton, NB","5,001 to 10,000","$1M to $5M (USD)","Medavie is a national health solutions partner and innovative leader in benefits management, health management, primary care and healthcare delivery.","","","","","","","Senior Full Stack Developer (React, TypeScript, Node or PHP)","indeed"
+"li-4385887719","linkedin","https://www.linkedin.com/jobs/view/4385887719","","Senior Full Stack Engineer","Aadmi Consulting","","","","","","","","",False,"","","","","","","https://www.linkedin.com/company/aadmi-consulting","","","","","","","","","","","","","Senior Full Stack Developer (React, TypeScript, Node or PHP)","linkedin"
