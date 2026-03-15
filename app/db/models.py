@@ -18,6 +18,7 @@ class Job(Base):
 
     webhook_url: Mapped[str | None] = mapped_column(String(512), nullable=True)
     webhook_secret: Mapped[str | None] = mapped_column(String(512), nullable=True)
+    idempotency_key: Mapped[str | None] = mapped_column(String(128), nullable=True, unique=True, index=True)
 
     total_units: Mapped[int] = mapped_column(Integer, default=0)
     completed_units: Mapped[int] = mapped_column(Integer, default=0)
@@ -99,6 +100,27 @@ class WebhookDelivery(Base):
     latency_ms: Mapped[int | None] = mapped_column(Integer, nullable=True)
     success: Mapped[bool] = mapped_column(Boolean, default=False)
     next_retry_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=lambda: datetime.now(timezone.utc))
+
+
+class JobResult(Base):
+    __tablename__ = 'job_results'
+    __table_args__ = (
+        UniqueConstraint('job_id', 'dedupe_hash', name='uq_job_results_job_id_dedupe_hash'),
+    )
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
+    job_id: Mapped[str] = mapped_column(ForeignKey('jobs.id', ondelete='CASCADE'), index=True)
+    unit_id: Mapped[int | None] = mapped_column(ForeignKey('job_units.id', ondelete='SET NULL'), index=True, nullable=True)
+    site: Mapped[str | None] = mapped_column(String(64), nullable=True)
+    search_term: Mapped[str] = mapped_column(String(255))
+    title: Mapped[str | None] = mapped_column(String(512), nullable=True)
+    company: Mapped[str | None] = mapped_column(String(512), nullable=True)
+    job_url: Mapped[str | None] = mapped_column(String(2048), nullable=True)
+    location: Mapped[str | None] = mapped_column(String(512), nullable=True)
+    date_posted: Mapped[str | None] = mapped_column(String(64), nullable=True)
+    dedupe_hash: Mapped[str] = mapped_column(String(64), index=True)
+    raw_json: Mapped[dict] = mapped_column(JSONB)
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=lambda: datetime.now(timezone.utc))
 
 

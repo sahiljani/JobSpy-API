@@ -27,6 +27,7 @@ def upgrade() -> None:
         sa.Column('options_json', postgresql.JSONB(astext_type=sa.Text()), nullable=False),
         sa.Column('webhook_url', sa.String(length=512), nullable=True),
         sa.Column('webhook_secret', sa.String(length=512), nullable=True),
+        sa.Column('idempotency_key', sa.String(length=128), nullable=True),
         sa.Column('total_units', sa.Integer(), nullable=False, server_default='0'),
         sa.Column('completed_units', sa.Integer(), nullable=False, server_default='0'),
         sa.Column('failed_units', sa.Integer(), nullable=False, server_default='0'),
@@ -42,6 +43,7 @@ def upgrade() -> None:
         sa.PrimaryKeyConstraint('id'),
     )
     op.create_index('ix_jobs_status', 'jobs', ['status'], unique=False)
+    op.create_index('ix_jobs_idempotency_key', 'jobs', ['idempotency_key'], unique=True)
 
     op.create_table(
         'job_units',
@@ -98,8 +100,37 @@ def upgrade() -> None:
     op.create_index('ix_webhook_deliveries_job_event_attempt', 'webhook_deliveries', ['job_id', 'event_id', 'attempt'], unique=False)
     op.create_index('ix_webhook_deliveries_job_id', 'webhook_deliveries', ['job_id'], unique=False)
 
+    op.create_table(
+        'job_results',
+        sa.Column('id', sa.Integer(), autoincrement=True, nullable=False),
+        sa.Column('job_id', sa.String(length=64), nullable=False),
+        sa.Column('unit_id', sa.Integer(), nullable=True),
+        sa.Column('site', sa.String(length=64), nullable=True),
+        sa.Column('search_term', sa.String(length=255), nullable=False),
+        sa.Column('title', sa.String(length=512), nullable=True),
+        sa.Column('company', sa.String(length=512), nullable=True),
+        sa.Column('job_url', sa.String(length=2048), nullable=True),
+        sa.Column('location', sa.String(length=512), nullable=True),
+        sa.Column('date_posted', sa.String(length=64), nullable=True),
+        sa.Column('dedupe_hash', sa.String(length=64), nullable=False),
+        sa.Column('raw_json', postgresql.JSONB(astext_type=sa.Text()), nullable=False),
+        sa.Column('created_at', sa.DateTime(timezone=True), nullable=False),
+        sa.ForeignKeyConstraint(['job_id'], ['jobs.id'], ondelete='CASCADE'),
+        sa.ForeignKeyConstraint(['unit_id'], ['job_units.id'], ondelete='SET NULL'),
+        sa.PrimaryKeyConstraint('id'),
+        sa.UniqueConstraint('job_id', 'dedupe_hash', name='uq_job_results_job_id_dedupe_hash'),
+    )
+    op.create_index('ix_job_results_dedupe_hash', 'job_results', ['dedupe_hash'], unique=False)
+    op.create_index('ix_job_results_job_id', 'job_results', ['job_id'], unique=False)
+    op.create_index('ix_job_results_unit_id', 'job_results', ['unit_id'], unique=False)
+
 
 def downgrade() -> None:
+    op.drop_index('ix_job_results_unit_id', table_name='job_results')
+    op.drop_index('ix_job_results_job_id', table_name='job_results')
+    op.drop_index('ix_job_results_dedupe_hash', table_name='job_results')
+    op.drop_table('job_results')
+
     op.drop_index('ix_webhook_deliveries_job_id', table_name='webhook_deliveries')
     op.drop_index('ix_webhook_deliveries_job_event_attempt', table_name='webhook_deliveries')
     op.drop_index('ix_webhook_deliveries_event_id', table_name='webhook_deliveries')
@@ -111,5 +142,6 @@ def downgrade() -> None:
     op.drop_index('ix_job_units_job_id', table_name='job_units')
     op.drop_table('job_units')
 
+    op.drop_index('ix_jobs_idempotency_key', table_name='jobs')
     op.drop_index('ix_jobs_status', table_name='jobs')
     op.drop_table('jobs')

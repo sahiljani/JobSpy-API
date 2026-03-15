@@ -19,4 +19,11 @@ celery_app.conf.update(
     accept_content=['json'],
     timezone='UTC',
     enable_utc=True,
+    beat_schedule={
+        'retry-due-webhooks-every-30-seconds': {
+            'task': 'webhooks.retry_due',
+            'schedule': 30.0,
+            'args': (100,),
+        }
+    },
 )

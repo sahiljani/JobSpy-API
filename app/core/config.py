@@ -17,6 +17,7 @@ class Settings(BaseSettings):
     database_url: str = Field(alias='DATABASE_URL')
     redis_url: str = Field(default='redis://127.0.0.1:6379/1', alias='REDIS_URL')
     api_key: str = Field(default='change-me', alias='API_KEY')
+    secret_encryption_key: str = Field(default='change-me-encryption-seed', alias='SECRET_ENCRYPTION_KEY')
 
     webhook_retry_seconds: str = Field(default='0,60,120,300,900,1800', alias='WEBHOOK_RETRY_SECONDS')
 

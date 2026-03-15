@@ -3,10 +3,11 @@ import time
 from datetime import datetime, timedelta, timezone
 
 import httpx
+from sqlalchemy import and_, func, select
 from sqlalchemy.orm import Session
 
 from app.core.config import get_settings
-from app.core.security import generate_webhook_signature
+from app.core.security import decrypt_secret, generate_webhook_signature
 from app.db.models import Job, JobEvent, WebhookDelivery
 
 
@@ -15,14 +16,27 @@ class WebhookService:
         self.db = db
         self.settings = get_settings()
 
+    def _compute_next_retry_at(self, *, success: bool, attempt: int) -> datetime | None:
+        if success:
+            return None
+
+        schedule = self.settings.webhook_retry_schedule
+        if attempt >= len(schedule):
+            return None
+
+        delay = schedule[attempt]
+        return datetime.now(timezone.utc) + timedelta(seconds=delay)
+
     def dispatch_event(self, job: Job, event: JobEvent, attempt: int = 1) -> bool:
         if not job.webhook_url or not job.webhook_secret:
             return True
 
+        secret = decrypt_secret(job.webhook_secret, self.settings.secret_encryption_key)
+
         payload = event.payload_json
         body = json.dumps(payload, separators=(',', ':'), ensure_ascii=False)
         ts = datetime.now(timezone.utc).isoformat()
-        sig = generate_webhook_signature(job.webhook_secret, ts, body)
+        sig = generate_webhook_signature(secret, ts, body)
 
         headers = {
             'Content-Type': 'application/json',
@@ -48,12 +62,7 @@ class WebhookService:
             success = False
 
         latency_ms = int((time.time() - started) * 1000)
-        retry_schedule = self.settings.webhook_retry_schedule
-
-        next_retry_at = None
-        if not success and attempt < len(retry_schedule):
-            delay = retry_schedule[attempt]
-            next_retry_at = datetime.now(timezone.utc) + timedelta(seconds=delay)
+        next_retry_at = self._compute_next_retry_at(success=success, attempt=attempt)
 
         self.db.add(
             WebhookDelivery(
@@ -71,3 +80,55 @@ class WebhookService:
         )
         self.db.flush()
         return success
+
+    def retry_due_deliveries(self, *, batch_size: int = 100) -> int:
+        """
+        Retry webhook deliveries where latest attempt is failed and due for retry.
+        Returns number of retry attempts dispatched.
+        """
+        now = datetime.now(timezone.utc)
+
+        latest_attempt_subq = (
+            select(
+                WebhookDelivery.event_id.label('event_id'),
+                func.max(WebhookDelivery.attempt).label('max_attempt'),
+            )
+            .group_by(WebhookDelivery.event_id)
+            .subquery()
+        )
+
+        due_rows = self.db.scalars(
+            select(WebhookDelivery)
+            .join(
+                latest_attempt_subq,
+                and_(
+                    WebhookDelivery.event_id == latest_attempt_subq.c.event_id,
+                    WebhookDelivery.attempt == latest_attempt_subq.c.max_attempt,
+                ),
+            )
+            .where(WebhookDelivery.success.is_(False))
+            .where(WebhookDelivery.next_retry_at.is_not(None))
+            .where(WebhookDelivery.next_retry_at <= now)
+            .order_by(WebhookDelivery.next_retry_at.asc())
+            .limit(batch_size)
+        ).all()
+
+        retried = 0
+        for last_delivery in due_rows:
+            event = self.db.get(JobEvent, last_delivery.event_id)
+            if not event:
+                continue
+            job = self.db.get(Job, event.job_id)
+            if not job:
+                continue
+            if job.status in {'cancelled'}:
+                # still allow delivery retries for audit trail terminal states?
+                # For now, continue trying because events should still be deliverable.
+                pass
+
+            next_attempt = int(last_delivery.attempt) + 1
+            self.dispatch_event(job, event, attempt=next_attempt)
+            retried += 1
+
+        self.db.flush()
+        return retried

@@ -1,0 +1,46 @@
+version: '3.9'
+
+services:
+  redis:
+    image: redis:7-alpine
+    container_name: jobspy-redis
+    ports:
+      - '6379:6379'
+
+  api:
+    image: python:3.11-slim
+    container_name: jobspy-api
+    working_dir: /app
+    volumes:
+      - ./:/app
+    env_file:
+      - .env
+    command: bash -lc "pip install -r requirements.txt && uvicorn main:app --host 0.0.0.0 --port 8080"
+    ports:
+      - '8080:8080'
+    depends_on:
+      - redis
+
+  worker:
+    image: python:3.11-slim
+    container_name: jobspy-worker
+    working_dir: /app
+    volumes:
+      - ./:/app
+    env_file:
+      - .env
+    command: bash -lc "pip install -r requirements.txt && celery -A app.workers.celery_app.celery_app worker --loglevel=info"
+    depends_on:
+      - redis
+
+  beat:
+    image: python:3.11-slim
+    container_name: jobspy-beat
+    working_dir: /app
+    volumes:
+      - ./:/app
+    env_file:
+      - .env
+    command: bash -lc "pip install -r requirements.txt && celery -A app.workers.celery_app.celery_app beat --loglevel=info"
+    depends_on:
+      - redis
