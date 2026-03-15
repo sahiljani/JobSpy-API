@@ -68,10 +68,9 @@ class JobCreateRequest(BaseModel):
     def validate_proxies(cls, values: list[str] | None) -> list[str] | None:
         if values is None:
             return None
-        for proxy in values:
-            if '@' not in proxy or proxy.count(':') < 2:
-                raise ValueError(f'invalid proxy format: {proxy}')
-        return values
+        # jobspy accepts multiple proxy formats (http://user:pass@host:port,
+        # host:port:user:pass, etc.) — pass through and let jobspy handle them.
+        return [v.strip() for v in values if v.strip()]
 
 
 class JobCreateResponse(BaseModel):
