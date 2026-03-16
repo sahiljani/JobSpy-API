@@ -40,6 +40,10 @@ class Settings(BaseSettings):
     celery_task_soft_time_limit: int = Field(default=1900, alias='CELERY_TASK_SOFT_TIME_LIMIT')
     celery_task_time_limit: int = Field(default=2000, alias='CELERY_TASK_TIME_LIMIT')
 
+    # Units (site × search_term) that run in parallel per job. Pure I/O — safe to
+    # exceed vCPU count. Keep ≤ SQLAlchemy pool_size (default 6) minus 1 for main thread.
+    orchestrator_max_workers: int = Field(default=4, alias='ORCHESTRATOR_MAX_WORKERS')
+
     @field_validator('webhook_retry_seconds')
     @classmethod
     def validate_retry_seconds(cls, value: str) -> str:

@@ -3,6 +3,7 @@ import json
 import math
 from typing import Any
 
+from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
 
 from app.db.models import JobResult
@@ -76,7 +77,11 @@ class ResultsService:
                     raw_json=self._sanitize(json.loads(json.dumps(row, default=str))),
                 )
             )
-            saved += 1
+            try:
+                self.db.flush()
+                saved += 1
+            except IntegrityError:
+                # Another parallel unit already inserted this URL — skip silently.
+                self.db.rollback()
 
-        self.db.flush()
         return saved

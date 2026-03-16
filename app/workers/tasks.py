@@ -1,16 +1,81 @@
+import threading
+from concurrent.futures import Future, ThreadPoolExecutor, as_completed
+from dataclasses import dataclass, field
 from datetime import datetime, timezone
+from typing import Any
 
 from sqlalchemy import select
 
+from app.core.config import get_settings
 from app.core.metrics import metrics
 from app.db.models import Job, JobUnit
 from app.db.session import SessionLocal
 from app.services.event_service import EventService
-from app.services.retention_service import RetentionService
 from app.services.results_service import ResultsService
-from app.services.scraper_service import ScraperService
+from app.services.retention_service import RetentionService
+from app.services.scraper_service import ScrapeResult, ScraperService
 from app.services.webhook_service import WebhookService
 from app.workers.celery_app import celery_app
+
+settings = get_settings()
+
+
+@dataclass
+class UnitOutcome:
+    unit_id: int
+    site: str
+    search_term: str
+    result: ScrapeResult
+    started_at: datetime
+    finished_at: datetime
+    saved_rows: int = 0
+
+
+def _run_unit(
+    *,
+    unit_id: int,
+    site: str,
+    search_term: str,
+    scrape_params: dict[str, Any],
+) -> UnitOutcome:
+    """Executed in a worker thread. Uses its own DB session for persist_rows."""
+    started_at = datetime.now(timezone.utc)
+    scraper = ScraperService()
+    result = scraper.scrape_unit(
+        site=site,
+        search_term=search_term,
+        location=scrape_params['location'],
+        hours_old=scrape_params['hours_old'],
+        results_wanted=scrape_params['results_wanted'],
+        country_indeed=scrape_params['country_indeed'],
+        proxies=scrape_params['proxies'],
+    )
+
+    saved_rows = 0
+    if result.ok and result.items:
+        db = SessionLocal()
+        try:
+            rs = ResultsService(db)
+            saved_rows = rs.persist_rows(
+                job_id=scrape_params['job_id'],
+                unit_id=unit_id,
+                site=site,
+                search_term=search_term,
+                rows=result.items,
+            )
+            db.commit()
+        finally:
+            db.close()
+
+    return UnitOutcome(
+        unit_id=unit_id,
+        site=site,
+        search_term=search_term,
+        result=result,
+        started_at=started_at,
+        finished_at=datetime.now(timezone.utc),
+        saved_rows=saved_rows,
+    )
 
 
 @celery_app.task(name='jobs.run_orchestrator')
@@ -22,8 +87,6 @@ def run_orchestrator(job_id: str) -> None:
             return
 
         events = EventService(db)
-        scraper = ScraperService()
-        results_service = ResultsService(db)
         webhooks = WebhookService(db)
 
         job.status = 'started'
@@ -41,7 +104,9 @@ def run_orchestrator(job_id: str) -> None:
         job.status = 'running'
         db.flush()
 
-        units = db.scalars(select(JobUnit).where(JobUnit.job_id == job_id).order_by(JobUnit.sequence.asc())).all()
+        units: list[JobUnit] = list(
+            db.scalars(select(JobUnit).where(JobUnit.job_id == job_id).order_by(JobUnit.sequence.asc())).all()
+        )
         request = job.request_json
         options = job.options_json or {}
         location = request.get('location') or 'Canada'
@@ -51,76 +116,117 @@ def run_orchestrator(job_id: str) -> None:
         proxies = request.get('proxies')
         max_runtime_sec = int(options.get('max_runtime_sec', 1800))
 
-        timed_out = False
+        scrape_params: dict[str, Any] = {
+            'job_id': job_id,
+            'location': location,
+            'hours_old': hours_old,
+            'results_wanted': results_wanted,
+            'country_indeed': country_indeed,
+            'proxies': proxies,
+        }
+
         started_at = job.started_at or datetime.now(timezone.utc)
+        timed_out = False
+        lock = threading.Lock()
 
+        # Build a map from unit_id → unit for main-thread updates
+        unit_map: dict[int, JobUnit] = {u.id: u for u in units}
+
+        # Mark all units running before we submit (avoids a double-flush race)
         for unit in units:
-            elapsed_sec = int((datetime.now(timezone.utc) - started_at).total_seconds())
-            if elapsed_sec > max_runtime_sec:
-                timed_out = True
-                break
-            if job.cancel_requested_at:
-                unit.status = 'cancelled'
-                job.skipped_units += 1
-                continue
-
-            unit.status = 'running'
             unit.started_at = datetime.now(timezone.utc)
-            db.flush()
+            unit.status = 'running'
+        db.flush()
+        db.commit()
 
-            result = scraper.scrape_unit(
-                site=unit.site,
-                search_term=unit.search_term,
-                location=location,
-                hours_old=hours_old,
-                results_wanted=results_wanted,
-                country_indeed=country_indeed,
-                proxies=proxies,
-            )
+        futures: dict[Future, JobUnit] = {}
+        executor = ThreadPoolExecutor(max_workers=settings.orchestrator_max_workers)
 
-            unit.attempts += 1
-            unit.finished_at = datetime.now(timezone.utc)
-            if result.ok:
-                unit.status = 'succeeded'
-                metrics.inc(f'unit_success_total:{unit.site}')
-                saved_rows = results_service.persist_rows(
-                    job_id=job_id,
+        try:
+            # Check cancel/timeout before submitting
+            db.expire(job)
+            job = db.get(Job, job_id)
+
+            for unit in units:
+                elapsed = (datetime.now(timezone.utc) - started_at).total_seconds()
+                if elapsed > max_runtime_sec:
+                    timed_out = True
+                    unit.status = 'skipped'
+                    job.skipped_units += 1
+                    continue
+                if job.cancel_requested_at:
+                    unit.status = 'cancelled'
+                    job.skipped_units += 1
+                    continue
+
+                fut = executor.submit(
+                    _run_unit,
                     unit_id=unit.id,
                     site=unit.site,
                     search_term=unit.search_term,
-                    rows=result.items,
+                    scrape_params=scrape_params,
                 )
-                unit.rows = saved_rows
-                job.completed_units += 1
-                job.rows_collected += saved_rows
-            else:
-                unit.status = 'failed'
-                metrics.inc(f'unit_failed_total:{unit.site}')
-                unit.error_code = result.error_code
-                unit.error_message = result.error_message
-                job.failed_units += 1
+                futures[fut] = unit
 
-            processed = job.completed_units + job.failed_units + job.skipped_units
-            if job.total_units > 0:
-                job.progress_percent = int((processed / job.total_units) * 100)
-
-            evt = events.emit(
-                job_id,
-                'job.progress',
-                {
-                    'status': 'running',
-                    'progress_percent': job.progress_percent,
-                    'completed_units': job.completed_units,
-                    'failed_units': job.failed_units,
-                    'total_units': job.total_units,
-                    'rows_collected': job.rows_collected,
-                    'current': {'site': unit.site, 'search_term': unit.search_term},
-                },
-            )
-            db.commit()
-            webhooks.dispatch_event(job, evt)
+            db.flush()
             db.commit()
 
+            for fut in as_completed(futures):
+                unit = futures[fut]
+
+                elapsed = (datetime.now(timezone.utc) - started_at).total_seconds()
+                if elapsed > max_runtime_sec:
+                    timed_out = True
+
+                db.expire(job)
+                job = db.get(Job, job_id)
+
+                outcome: UnitOutcome = fut.result()
+
+                unit.attempts += 1
+                unit.started_at = outcome.started_at
+                unit.finished_at = outcome.finished_at
+
+                if outcome.result.ok:
+                    unit.status = 'succeeded'
+                    unit.rows = outcome.saved_rows
+                    metrics.inc(f'unit_success_total:{unit.site}')
+                    job.completed_units += 1
+                    job.rows_collected += outcome.saved_rows
+                else:
+                    unit.status = 'failed'
+                    unit.error_code = outcome.result.error_code
+                    unit.error_message = outcome.result.error_message
+                    metrics.inc(f'unit_failed_total:{unit.site}')
+                    job.failed_units += 1
+
+                processed = job.completed_units + job.failed_units + job.skipped_units
+                if job.total_units > 0:
+                    job.progress_percent = int((processed / job.total_units) * 100)
+
+                evt = events.emit(
+                    job_id,
+                    'job.progress',
+                    {
+                        'status': 'running',
+                        'progress_percent': job.progress_percent,
+                        'completed_units': job.completed_units,
+                        'failed_units': job.failed_units,
+                        'total_units': job.total_units,
+                        'rows_collected': job.rows_collected,
+                        'current': {'site': unit.site, 'search_term': unit.search_term},
+                    },
+                )
+                db.flush()
+                db.commit()
+                webhooks.dispatch_event(job, evt)
+                db.commit()
+
+        finally:
+            executor.shutdown(wait=False)
+
+        # Final state
+        db.expire(job)
         job = db.get(Job, job_id)
         if not job:
             return

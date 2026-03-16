@@ -32,18 +32,28 @@ class ScraperService:
         country_indeed: str,
         proxies: list[str] | None,
     ) -> ScrapeResult:
+        # Build site-appropriate params.
+        # - linkedin: location-based only (global). country_indeed not used.
+        # - ziprecruiter: US/Canada only, location-based. country_indeed not used.
+        # - indeed/glassdoor: require country_indeed for non-US searches.
+        # - google: uses google_search_term for richer results.
         params: dict[str, Any] = {
             'site_name': [site],
             'search_term': search_term,
             'location': location,
             'results_wanted': results_wanted,
             'hours_old': hours_old,
-            'country_indeed': country_indeed,
             'proxies': proxies,
-            'google_search_term': f'{search_term} jobs near {location} since yesterday',
-            'linkedin_fetch_description': site == 'linkedin',
             'verbose': 0,
         }
+
+        if site == 'linkedin':
+            params['linkedin_fetch_description'] = True
+        elif site in {'indeed', 'glassdoor'}:
+            params['country_indeed'] = country_indeed
+        elif site == 'google':
+            params['google_search_term'] = f'{search_term} jobs near {location} since yesterday'
+        # ziprecruiter: location only, no extra params needed
 
         executor = ThreadPoolExecutor(max_workers=1)
         future: Future = executor.submit(scrape_jobs, **params)
