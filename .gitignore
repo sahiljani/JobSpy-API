@@ -16,3 +16,4 @@ build/
 # Local runtime artifacts
 celerybeat-schedule
 .env.bak.*
+PARALLEL_UNITS_PLAN.md
