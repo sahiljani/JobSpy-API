@@ -1,10 +1,13 @@
+import os
 from datetime import datetime, timezone
 
 from app.db.models import Job
 
+API_KEY = os.getenv('API_KEY', 'change-me')
+
 
 def test_list_jobs_empty(test_client):
-    resp = test_client.get('/v1/jobs', headers={'X-API-Key': 'change-me'})
+    resp = test_client.get('/v1/jobs', headers={'X-API-Key': API_KEY})
     assert resp.status_code == 200
     body = resp.json()
     assert body['jobs'] == []
@@ -40,7 +43,7 @@ def test_list_jobs_status_filter(test_client, test_session_maker):
     finally:
         db.close()
 
-    resp = test_client.get('/v1/jobs?status=running', headers={'X-API-Key': 'change-me'})
+    resp = test_client.get('/v1/jobs?status=running', headers={'X-API-Key': API_KEY})
     assert resp.status_code == 200
     jobs = resp.json()['jobs']
     assert len(jobs) == 1

@@ -6,12 +6,17 @@ from pathlib import Path
 import pytest
 from fastapi.testclient import TestClient
 from sqlalchemy import create_engine
+from sqlalchemy import text
 from sqlalchemy.exc import OperationalError
 from sqlalchemy.orm import Session, sessionmaker
 
 ROOT = Path(__file__).resolve().parent.parent
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
+
+from tests.support.env import load_env_file
+
+load_env_file(ROOT / '.env.test')
 
 from app.db.base import Base
 import app.db.models  # noqa: F401 – register all ORM models with Base.metadata
@@ -62,6 +67,18 @@ def test_session_maker(test_engine):
     return sessionmaker(bind=test_engine, autoflush=False, autocommit=False, class_=Session)
 
 
+@pytest.fixture(autouse=True)
+def truncate_tables(test_engine) -> Generator[None, None, None]:
+    table_names = [table.name for table in reversed(Base.metadata.sorted_tables)]
+
+    with test_engine.begin() as connection:
+        if table_names:
+            joined = ', '.join(f'"{name}"' for name in table_names)
+            connection.execute(text(f'TRUNCATE TABLE {joined} RESTART IDENTITY CASCADE'))
+
+    yield
+
+
 @pytest.fixture()
 def db_session(test_session_maker) -> Generator[Session, None, None]:
     session = test_session_maker()
@@ -75,11 +92,14 @@ def db_session(test_session_maker) -> Generator[Session, None, None]:
 @pytest.fixture()
 def test_client(test_session_maker):
     from app.db.session import get_db
+    from app.core.config import get_settings
     from app.services.scraper_service import ScrapeResult
     from app.services.scraper_service import ScraperService
     from app.workers import tasks
     from app.workers.celery_app import celery_app
     from main import app
+
+    get_settings.cache_clear()
 
     def _override_get_db():
         db = test_session_maker()

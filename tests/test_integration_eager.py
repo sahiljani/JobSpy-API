@@ -1,3 +1,9 @@
+import os
+
+
+API_KEY = os.getenv('API_KEY', 'change-me')
+
+
 def test_job_lifecycle_with_eager_worker(test_client):
     payload = {
         'search_terms': ['SEO Specialist', 'Laravel Developer'],
@@ -18,7 +24,7 @@ def test_job_lifecycle_with_eager_worker(test_client):
         '/v1/jobs',
         json=payload,
         headers={
-            'X-API-Key': 'change-me',
+            'X-API-Key': API_KEY,
             'X-Idempotency-Key': 'it-eager-001',
         },
     )
@@ -26,7 +32,7 @@ def test_job_lifecycle_with_eager_worker(test_client):
     body = resp.json()
     job_id = body['job_id']
 
-    status_resp = test_client.get(f'/v1/jobs/{job_id}', headers={'X-API-Key': 'change-me'})
+    status_resp = test_client.get(f'/v1/jobs/{job_id}', headers={'X-API-Key': API_KEY})
     assert status_resp.status_code == 200
     status = status_resp.json()
     assert status['status'] in {'completed'}
@@ -34,12 +40,12 @@ def test_job_lifecycle_with_eager_worker(test_client):
     assert status['completed_units'] == 4
     assert status['failed_units'] == 0
 
-    events_resp = test_client.get(f'/v1/jobs/{job_id}/events', headers={'X-API-Key': 'change-me'})
+    events_resp = test_client.get(f'/v1/jobs/{job_id}/events', headers={'X-API-Key': API_KEY})
     assert events_resp.status_code == 200
     events_body = events_resp.json()
     assert len(events_body['events']) >= 2
 
-    results_resp = test_client.get(f'/v1/jobs/{job_id}/results', headers={'X-API-Key': 'change-me'})
+    results_resp = test_client.get(f'/v1/jobs/{job_id}/results', headers={'X-API-Key': API_KEY})
     assert results_resp.status_code == 200
     results_body = results_resp.json()
     assert len(results_body['results']) > 0
@@ -52,7 +58,7 @@ def test_idempotency_reuses_job_id(test_client):
     }
 
     headers = {
-        'X-API-Key': 'change-me',
+        'X-API-Key': API_KEY,
         'X-Idempotency-Key': 'it-idempotent-123',
     }
 

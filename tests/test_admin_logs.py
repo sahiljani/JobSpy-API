@@ -1,6 +1,9 @@
+import os
 from pathlib import Path
 
 from app.services.log_diagnostics import LogDiagnosticsService
+
+API_KEY = os.getenv('API_KEY', 'change-me')
 
 
 def test_log_diagnostics_tail_caps_lines(tmp_path: Path):
@@ -41,7 +44,7 @@ def test_admin_log_tail_endpoint_returns_content(test_client):
     log_path.parent.mkdir(parents=True, exist_ok=True)
     log_path.write_text('hello\nworld\n', encoding='utf-8')
 
-    resp = test_client.get('/v1/admin/logs/tail?limit=2', headers={'X-API-Key': 'change-me'})
+    resp = test_client.get('/v1/admin/logs/tail?limit=2', headers={'X-API-Key': API_KEY})
     assert resp.status_code == 200
     body = resp.json()
     assert body['ok'] is True
@@ -52,7 +55,7 @@ def test_admin_log_tail_endpoint_returns_content(test_client):
 def test_admin_log_diagnose_endpoint_returns_summary(test_client):
     resp = test_client.post(
         '/v1/admin/logs/diagnose',
-        headers={'X-API-Key': 'change-me'},
+        headers={'X-API-Key': API_KEY},
         json={
             'log_text': 'ERROR 407 proxy authentication required',
             'prompt': 'tell me whether proxy is the issue',

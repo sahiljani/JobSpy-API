@@ -43,6 +43,7 @@ class WebhookService:
             'X-Webhook-Event': event.type,
             'X-Webhook-Event-Id': event.id,
             'X-Webhook-Job-Id': event.job_id,
+            'X-Webhook-Event-Sequence': str(event.sequence),
             'X-Webhook-Timestamp': ts,
             'X-Webhook-Signature': sig,
         }
